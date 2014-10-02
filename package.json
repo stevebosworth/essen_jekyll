@@ -1,0 +1,33 @@
+{
+  "name": "essen",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Yeoman workflow for essen",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "zurb-foundation": "^4.2.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^1.1.2",
+    "browserify": "^5.12.0",
+    "gulp": "^3.8.5",
+    "gulp-autoprefixer": "0.0.7",
+    "gulp-browserify": "^0.5.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "^2.3.3",
+    "gulp-imagemin": "^0.6.1",
+    "gulp-minify-css": "^0.3.6",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^0.7.2",
+    "gulp-uglify": "^0.3.1",
+    "jquery": "^2.1.1"
+  }
+}
