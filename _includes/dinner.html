@@ -1,0 +1,16 @@
+<div class="section">
+  <h2>mains</h2>
+  <ul class="section__list">
+    {% for item in site.data.dinner.mains.items %}
+      <li class="section__item">
+        <span class="section__item-name">{{ item.name }}</span>
+        <span class="section__item-description">{{ item.description }}</span>
+        <span class="section__item-price">
+          <span class="currency">$</span>
+          <span class="double-price">{{ item.price.pair }}</span>/
+          <span class="quad-price">{{ item.price.quad }}</span>
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

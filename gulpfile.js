@@ -10,13 +10,14 @@ var browserSync = require('browser-sync');
 var cp          = require('child_process');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
-var browserify  = require('gulp-browserify');
+var browserify  = require('browserify');
 var rename      = require('gulp-rename');
 var clean       = require('gulp-clean');
 var minifyCSS   = require('gulp-minify-css');
 var uglify      = require('gulp-uglify');
 var concat      = require('gulp-concat');
 var imagemin    = require('gulp-imagemin');
+var source      = require('vinyl-source-stream');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -57,8 +58,9 @@ gulp.task('build', ['sass', 'js']);
 gulp.task('sass', function () {
     gulp.src('src/css/**/*.scss')
         .pipe(sass({
-            includePaths: ['scss'],
-            onError: browserSync.notify
+            includePaths: ['scss', './node_modules/zurb-foundation/css'],
+            onError: browserSync.notify,
+            sourceMap: true
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(minifyCSS())
@@ -68,26 +70,22 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('js', function() {
-    // Single entry point to browserify
-    gulp.src('src/js/main.js')
-        .pipe(browserify({
-          insertGlobals : true,
-          debug : !gulp.env.production
-        }))
-        // .pipe(rename({ suffix: '.min' }))
-        // .pipe(gulp.dest('_site/dist/js'))
-        // .pipe(browserSync.reload({ stream: true }))
-        .pipe(gulp.dest('dist/js'));
+gulp.task('js', function () {
+  return browserify('./src/js/main.js')
+        .bundle()
+        //Pass desired output filename to vinyl-source-stream
+        .pipe(source('main.js'))
+        // Start piping stream to tasks!
+        .pipe(gulp.dest('./dist/js/'));
 });
 
-// gulp.task('images', function() {
-//     gulp.src('src/images/**/*.+(png|jpeg|jpg|gif|svg)')
-//         .pipe(imagemin())
-//         .pipe(gulp.dest('_site/dist/img'))
-//         .pipe(browserSync.reload({ stream: true }))
-//         .pipe(gulp.dest('dist/img'));
-// })
+gulp.task('images', function() {
+    gulp.src('src/images/**/*.+(png|jpeg|jpg|gif|svg)')
+        .pipe(imagemin())
+        .pipe(gulp.dest('_site/dist/img'))
+        .pipe(browserSync.reload({ stream: true }))
+        .pipe(gulp.dest('dist/img'));
+});
 
 /**
  * Watch scss files for changes & recompile
@@ -95,9 +93,9 @@ gulp.task('js', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('src/css/*.scss', ['sass']);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_config.yml'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_config.yml', '_includes/*.html'], ['jekyll-rebuild']);
     gulp.watch('src/js/*.js', ['js']);
-    // gulp.watch('src/images/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);
+    gulp.watch('src/images/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);
 });
 
 /**

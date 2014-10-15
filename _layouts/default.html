@@ -13,31 +13,12 @@
 
     </head>
     <body>
-
-        <div class="site">
-          <div class="header">
-            <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-            <a class="extra" href="/">home</a>
-          </div>
-
-          {{ content }}
-
-          <div class="footer">
-            <div class="contact">
-              <p>
-                stevebosworth<br />
-                <a href="mailto:stevebosworth@gmail.com">stevebosworth@gmail.com</a>
-              </p>
-            </div>
-            <div class="contact">
-              <p>
-                <a href="https://github.com/yourusername">github.com/yourusername</a><br />
-                <a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-              </p>
-            </div>
-          </div>
-        </div>
-
+      <div class="site">
+        {% include header.html %}
+        <main class="main">
+          {% include dinner.html %}
+        </main>
+      </div>
     <!-- build:js(app) /src/js/scripts.js -->
     <script src="/dist/js/build.min.js"></script>
     <!-- endbuild -->
