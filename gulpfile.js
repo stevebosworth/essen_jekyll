@@ -50,13 +50,13 @@ gulp.task('browser-sync', ['build', 'jekyll-build'], function() {
     });
 });
 
-gulp.task('build', ['sass', 'js']);
+gulp.task('build', ['sass', 'js', "images"]);
 
 /**
  * Compile files from src into both _site/dist/css (for live injecting) and dist/css (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    gulp.src('src/css/**/*.scss')
+    gulp.src('src/css/**/main.scss')
         .pipe(sass({
             includePaths: ['scss', './node_modules/zurb-foundation/css'],
             onError: browserSync.notify,
@@ -80,7 +80,7 @@ gulp.task('js', function () {
 });
 
 gulp.task('images', function() {
-    gulp.src('src/images/**/*.+(png|jpeg|jpg|gif|svg)')
+    gulp.src('src/img/**/*.+(png|jpeg|jpg|gif|svg)')
         .pipe(imagemin())
         .pipe(gulp.dest('_site/dist/img'))
         .pipe(browserSync.reload({ stream: true }))
