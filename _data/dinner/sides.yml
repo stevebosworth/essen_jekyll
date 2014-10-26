@@ -1,0 +1,40 @@
+title: "sides"
+name: "sides"
+
+items:
+  - name: "Pearl cous-couse"
+    description: "with preserved lemon"
+    price:
+      pair: 6
+      quad: 10
+
+  - name: "Pierogies"
+    description: "potato and onions"
+    price:
+      pair: 6
+      quad: 10
+
+  - name: "Duck fat fries"
+    description: "herbs, spiced salt (available vegan)"
+    price:
+      pair: 6
+      quad: 10
+
+  - name: "Cabbage rolls"
+    description: "rice, cooked in tomato sauce"
+    price:
+      pair: 10
+      quad: 18
+
+  - name: "Mashed Potato"
+    description: "roast garlic"
+    price:
+      pair: 5
+      quad: 8
+
+  - name: "Pita"
+    description: "olive oil and za’atar"
+    price:
+      pair: 3
+      quad: 5
+

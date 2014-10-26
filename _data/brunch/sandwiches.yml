@@ -1,0 +1,24 @@
+title: "Sandwiches"
+name: "Sandwiches"
+
+items:
+  - name: "Jewish banh mi "
+    price: 12
+    description: "chopped chicken liver, fried beef salami, grainy mustard, pickled carrots, red onion"
+
+  - name: "Bagel "
+    price: 12
+    description: "house smoked salmon, dill whipped cream cheese, lettuce, red onions, capers"
+
+  - name: "Schnitzel "
+    price: 12
+    description: "chicken breast or tilapia filet, spicy roast pepper sauce, garlic mayo"
+
+  - name: "Brisket "
+    price: 12
+    description: "horseradish, garlic mayo, grainy mustard, red onion and lettuce"
+
+  - name: "Breakfast sandwich "
+    price: 8
+    description: "challa, plain omelet, brie, lettuce, tomato, garlic mayo"
+

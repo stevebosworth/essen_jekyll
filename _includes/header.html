@@ -6,27 +6,27 @@
       <img src="/dist/img/logo-662x453.png" alt="">
     </div>
     <nav>
-      <div class="off-canvas-wrap" data-offcanvas>
-        <div class="inner-wrap">
-
-          <a class="left-off-canvas-toggle" href="#" >Menu</a>
-
-          <!-- Off Canvas Menu -->
-          <aside class="left-off-canvas-menu">
-              <!-- whatever you want goes here -->
-              <ul>
-                <li><a href="#">Item 1</a></li>
-              ...
-              </ul>
-          </aside>
-
-          <!-- main content goes here -->
-          <p>Set in the year 0 F.E. ("Foundation Era"), The Psychohistorians opens on Trantor, the capital of the 12,000-year-old Galactic Empire. Though the empire appears stable and powerful, it is slowly decaying in ways that parallel the decline of the Western Roman Empire. Hari Seldon, a mathematician and psychologist, has developed psychohistory, a new field of science and psychology that equates all possibilities in large societies to mathematics, allowing for the prediction of future events.</p>
-
-        <!-- close the off-canvas menu -->
-        <a class="exit-off-canvas"></a>
-
-        </div>
-      </div>
+      <ul class="main-nav">
+        <li class="nav-item__dinner">
+          <a href="#Dinner">Dinner</a>
+          <ul class="sub-nav__dinner">
+            {% for item in site.data.dinner %}
+              <li class="sub-nav__item--dinner">
+                <a href="#Dinner{{ item[1].name | capitalize }}">{{ item[1].title | capitalize }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li class="nav-item__brunch">
+          <a href="#Brunch">Brunch</a>
+          <ul class="sub-nav__brunch">
+            {% for item in site.data.brunch %}
+              <li class="sub-nav__item--brunch">
+              <a href="#Brunch{{ item[1].name | capitalize }}">{{ item[1].title | capitalize }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
     </nav>
 </header>

@@ -1,0 +1,16 @@
+title: "Toppings"
+name: "Toppings"
+
+items:
+  - name: "Gribenes"
+    description: "(crispy duck or chicken skin)"
+
+  - name: "Fried onions"
+
+  - name: "Roast pepper sauce/ Garlic tahini"
+
+  - name: "Brisket hash"
+
+  - name: "Sour cream"
+
+  - name: "Brisket Jus"

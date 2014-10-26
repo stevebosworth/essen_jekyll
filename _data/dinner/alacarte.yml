@@ -1,0 +1,27 @@
+title: "A la carte"
+name: "Alacarte"
+
+items:
+  - name: "Za'atar rubbed tuna loin"
+    price: 22
+    description: "Albacore tuna on preserved lemon cous-cous with roast cauliflower"
+
+  - name: "Braised beef brisket"
+    price: 18
+    description: "on mashed potatoes with roast carrots, natural jus and prepared horseradish"
+  - name: "Roast duck breast"
+    price: 22
+    description: "on potato and onion pierogies, with braised cabbage,currantjus"
+
+  - name: "Schnitzel"
+    price: 16
+    description: "with cabbage rolls and garlic greens"
+
+  - name: "Falafel plate for one"
+    price: 12
+    description: "hummus, tahini, pita, pickled turnips, smoked olives"
+
+  - name: "Ramen for one"
+    price: 10
+    description: "egg noodles, matzoh balls, soft egg, brisket kreplach, veggies"
+

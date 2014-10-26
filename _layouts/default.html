@@ -6,6 +6,9 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
+        <!-- google web fonts -->
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
         <!-- build:css({app,.tmp}) /src/css/main.css -->
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/dist/css/build.min.css">
@@ -16,11 +19,16 @@
       <div class="site">
         {% include header.html %}
         <main class="main">
-          {% include dinner.html %}
+          <section id="Dinner">
+            {% include dinner.html %}
+          </section>
+          <section id="Brunch">
+            {% include brunch.html %}
+          </section>
         </main>
       </div>
     <!-- build:js(app) /src/js/scripts.js -->
-    <script src="/dist/js/main.js"></script>
+    <!-- <script src="/dist/js/main.js"></script> -->
     <!-- endbuild -->
     </body>
 </html>

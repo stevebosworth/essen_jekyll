@@ -1,0 +1,30 @@
+title: "Sides"
+name: "Sides"
+
+items:
+  - name: "Fried beef salami"
+    price: 5
+
+  - name: "Smoked salmon"
+    price: 6
+
+  - name: "Sautéed mushrooms"
+    price: 5
+
+  - name: "Homefries"
+    price: 5
+
+  - name: "Toast"
+    price: 1
+
+  - name: "Gribenes"
+    price: 3
+
+  - name: "Hollandaise"
+    price: 3
+    description: "Available on weekends only for brunch"
+
+  - name: "Salad"
+    price: 3
+
+

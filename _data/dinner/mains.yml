@@ -1,8 +1,9 @@
 title: "mains"
+name: "mains"
 
 items:
-  - name: "Albacore tuna loin"
-    description: "za'atar rub, harissa"
+  - name: "Albacore tuna loin "
+    description: "za’atar rub, harissa"
     price:
       pair: 20
       quad: 36
@@ -10,11 +11,11 @@ items:
   - name: "Braised beef brisket"
     description: "natural jus, prepared horseradish"
     price:
-      pair: 18
-      quad: 34
+      pair: 8
+      quad: 4
 
-  - name: "Chicken or fish scnitzel"
-    description: "chicken breast or tilapia filet, mixed seed crust, roast pepper sauce"
+  - name: "Chicken or fish schnitzel "
+    description: "chicken breast or tilapia filet, mixed seed crust, roast pepper sauce "
     price:
       pair: 12
       quad: 22
@@ -25,19 +26,8 @@ items:
       pair: 18
       quad: 34
 
-  - name: "Falafel Platter"
-    description: "Hummus, tahini, pita, pickled turnips, smoked olives"
+  - name: "Falafel platter "
+    description: "hummus, tahini, pita, pickled turnips, smoked olives"
     price:
       pair: 18
       quad: 32
-
-  - name: "Pearl cous-cous"
-    description: "with preserved lemons"
-    price:
-      pair: 18
-      quad: 32
-  - name: "Perogies"
-    description: "Potato and onion"
-    price:
-      pair: 6
-      quad: 10

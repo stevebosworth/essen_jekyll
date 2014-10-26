@@ -1,0 +1,13 @@
+title: "Desserts"
+name: "Desserts"
+
+items:
+  - name: "Cookie plate"
+    price: 6
+    description: "Nechama’s strudel, rugelach, coconut macaroons"
+  - name: "Aba’s apple cake"
+    price: 6
+    description: "with vanilla ice cream"
+  - name: "Puff daddy"
+    price: 5
+    description: "deep fried puff pastry with pomegranate molasses and halva"

@@ -1,0 +1,11 @@
+title: "Eggs"
+name: "Eggs"
+
+items:
+  - name: "Brisket hash"
+    price: 14
+    description: "peppers, potatoes, onions, fresh chilies, herbs, poached eggs"
+
+  - name: "Fried eggs"
+    price: 12
+    description: "up, down or scrambled. Fries, salad and toast. Served with your choice of smoked salmon, brie, or beef salami"

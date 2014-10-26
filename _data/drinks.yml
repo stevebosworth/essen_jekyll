@@ -1,0 +1,27 @@
+title: "Drinks"
+name: "Drinks"
+
+items:
+  - name: "Pop"
+    price: 2
+
+  - name: "Limonana"
+    price: 4
+
+  - name: "Juice"
+    price: 3
+
+  - name: "Tea"
+    price: 2.50
+
+  - name: "Espresso"
+    price: 2.75
+
+  - name: "Americano"
+    price: 2.75
+
+  - name: "Cappucino"
+    price: 3.50
+
+  - name: "Latte"
+    price: 4

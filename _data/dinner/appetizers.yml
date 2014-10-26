@@ -1,0 +1,38 @@
+title: "Appetizers"
+name: "Appetizers"
+
+items:
+  - name: "Smoked Olives"
+    description: "marinated and smoked in house"
+    price: 5
+
+  - name: "Pickles"
+    description: "mixed batches"
+    price: 5
+
+  - name: "Chopped liver"
+    description: "boiled egg, schmaltz onions, pita chips"
+    price: 12
+
+  - name: "Hummus"
+    description: "pita, tahini"
+    price: 6
+
+  - name: "Miami short ribs"
+    description: "with prune and manischevitz glaze, fresh chillies and scallions"
+    price: 12
+
+  - name: "Smoked salmon "
+    description: "dill, red onion, capers, pumpernickel"
+    price: 12
+
+  - name: "Pita Nachos"
+    description: "pita chips, garlic tahini, chopped salad,harissa"
+    price: 6
+
+  - name: "Jewish Ramen"
+    description: "egg noodles, matzoh balls, soft egg, brisket kreplach, veggies"
+    price:
+      pair: 14
+      quad: 24
+

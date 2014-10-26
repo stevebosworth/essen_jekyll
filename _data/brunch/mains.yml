@@ -1,0 +1,23 @@
+title: "Brunch sat & sun"
+name: "mains"
+
+items:
+  - name: "Potato rösti"
+    price: 14
+    description: "crispy potato pancake topped with dill whipped cream cheese, house smoked salmon, greens, red onions and capers"
+
+  - name: "Eggs benedict"
+    price: 12
+    description: "2 poached eggs with your choice of brie, smoked salmon or mushrooms, on english muffin, with hollandaise, salad and homefries"
+
+  - name: "Challa french toast"
+    price: 10
+    description: "2 thick cuts slices of challa, egg dipped, served with vanilla Chantilly and berry maple compote"
+
+  - name: "Omelette"
+    price: 12
+    description: "Mushrooms, beef salami, spicy roast pepper sauce, served with homefries and salad"
+
+  - name: "Shak shuka"
+    price: 12
+    description: "eggs poached in spicy tomato sauce with veggies, served with pita"

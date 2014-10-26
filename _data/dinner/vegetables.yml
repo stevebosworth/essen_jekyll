@@ -1,0 +1,44 @@
+title: "vegetables"
+name: "vegetables"
+
+items:
+  - name: "Roast eggplant "
+    description: "tahini, herbs and chopped red onions"
+    price:
+      pair: 6
+      quad: 14
+
+  - name: "Tsimmis roast carrots "
+    description: "light herb and maple glaze"
+    price:
+      pair: 6
+      quad: 10
+  - name: "Caesar "
+    description: "Romaine, anchovy and garlic vinaigrette, pita chips"
+    price:
+      pair: 6
+      quad: 10
+
+  - name: "Seasonal greens "
+    description: "garlic and fresh chillies"
+    price:
+      pair: 7
+      quad: 12
+
+  - name: "Braised red cabbage"
+    description: "caraway"
+    price:
+      pair: 5
+      quad: 8
+
+  - name: "Chopped salad "
+    description: "tomato, onion, cucumber, lemon za’atar vinaigrette"
+    price:
+      pair: 8
+      quad: 14
+
+  - name: "Roast cauliflower "
+    description: "turmeric, za’atar, olive oil"
+    price:
+      pair: 6
+    quad: 10

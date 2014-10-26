@@ -1,8 +1,8 @@
-{% assign mains = site.data.dinner.mains %}
-<div class="section section-{{ mains.name }}" id="Dinner{{ mains.name | capitalize}}">
-  <h2>{{ mains.title }}</h2>
+{% assign eggs = site.data.brunch.eggs %}
+<div class="section section-{{ eggs.title }}" id="Brunch{{ eggs.name | capitalize }}">
+  <h2>{{ eggs.title }}</h2>
   <ul class="section__list">
-    {% for item in mains.items %}
+    {% for item in eggs.items %}
       <li class="section__item">
         <span class="section__item-name">{{ item.name }}</span>
         <span class="section__item-price">
@@ -22,11 +22,11 @@
   </ul>
 </div>
 
-{% assign vegetables = site.data.dinner.vegetables %}
-<div class="section section-{{ vegetables.name }}" id="Dinner{{ vegetables.name | capitalize}}">
-  <h2>{{ vegetables.title }}</h2>
+{% assign salads = site.data.brunch.salads %}
+<div class="section section-{{ salads.title }}" id="Brunch{{ salads.name | capitalize }}">
+  <h2>{{ salads.title }}</h2>
   <ul class="section__list">
-    {% for item in vegetables.items %}
+    {% for item in salads.items %}
       <li class="section__item">
         <span class="section__item-name">{{ item.name }}</span>
         <span class="section__item-price">
@@ -46,8 +46,33 @@
   </ul>
 </div>
 
-{% assign sides = site.data.dinner.sides %}
-<div class="section section-{{ sides.name }}" id="Dinner{{ sides.name | capitalize}}">
+
+{% assign sandwiches = site.data.brunch.sandwiches %}
+<div class="section section-{{ sandwiches.title }}" id="Brunch{{ sandwiches.name | capitalize }}">
+  <h2>{{ sandwiches.title }}</h2>
+  <ul class="section__list">
+    {% for item in sandwiches.items %}
+      <li class="section__item">
+        <span class="section__item-name">{{ item.name }}</span>
+        <span class="section__item-price">
+          <span class="currency">$</span>
+          {% if item.price.pair %}
+            <span class="double-price">{{ item.price.pair }}</span>/
+            <span class="quad-price">{{ item.price.quad }}</span>
+          {% else %}
+            <span class="price">{{ item.price }}</span>
+          {% endif %}
+        </span>
+        {% if item.description %}
+          <span class="section__item-description">{{ item.description }}</span>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% assign sides = site.data.brunch.sides %}
+<div class="section section-{{ sides.title }}" id="Brunch{{ sides.name | capitalize }}">
   <h2>{{ sides.title }}</h2>
   <ul class="section__list">
     {% for item in sides.items %}
@@ -70,11 +95,11 @@
   </ul>
 </div>
 
-{% assign appetizers = site.data.dinner.appetizers %}
-<div class="section section-{{ appetizers.name }}" id="Dinner{{ appetizers.name | capitalize}}">
-  <h2>{{ appetizers.title }}</h2>
+{% assign mains = site.data.brunch.mains %}
+<div class="section section-{{ mains.title }}" id="Brunch{{ mains.name | capitalize }}">
+  <h2>{{ mains.title }}</h2>
   <ul class="section__list">
-    {% for item in appetizers.items %}
+    {% for item in mains.items %}
       <li class="section__item">
         <span class="section__item-name">{{ item.name }}</span>
         <span class="section__item-price">
@@ -95,73 +120,10 @@
 </div>
 
 {% assign drinks = site.data.drinks %}
-<div class="section section-{{ drinks.name }}" id="Dinner{{ drinks.name | capitalize}}">
+<div class="section section-{{ drinks.title }}" id="Brunch{{ drinks.name | capitalize }}">
   <h2>{{ drinks.title }}</h2>
   <ul class="section__list">
     {% for item in drinks.items %}
-      <li class="section__item">
-        <span class="section__item-name">{{ item.name }}</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          {% if item.price.pair %}
-            <span class="double-price">{{ item.price.pair }}</span>/
-            <span class="quad-price">{{ item.price.quad }}</span>
-          {% else %}
-            <span class="price">{{ item.price }}</span>
-          {% endif %}
-        </span>
-        {% if item.description %}
-          <span class="section__item-description">{{ item.description }}</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-{% assign alacarte = site.data.dinner.alacarte %}
-<div class="section section-{{ alacarte.name }}" id="Dinner{{ alacarte.name | capitalize}}">
-  <h2>{{ alacarte.title }}</h2>
-  <ul class="section__list">
-    {% for item in alacarte.items %}
-      <li class="section__item">
-        <span class="section__item-name">{{ item.name }}</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          {% if item.price.pair %}
-            <span class="double-price">{{ item.price.pair }}</span>/
-            <span class="quad-price">{{ item.price.quad }}</span>
-          {% else %}
-            <span class="price">{{ item.price }}</span>
-          {% endif %}
-        </span>
-        {% if item.description %}
-          <span class="section__item-description">{{ item.description }}</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-{% assign toppings = site.data.dinner.toppings %}
-<div class="section section-{{ toppings.name }}" id="Dinner{{ toppings.name | capitalize}}">
-  <h2>{{ toppings.title }}</h2>
-  <ul class="section__list">
-    {% for item in toppings.items %}
-      <li class="section__item">
-        <span class="section__item-name">{{ item.name }}</span>
-        {% if item.description %}
-          <span class="section__item-description">{{ item.description }}</span>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-
-{% assign desserts = site.data.dinner.desserts %}
-<div class="section section-{{ desserts.name }}" id="Dinner{{ desserts.name | capitalize}}">
-  <h2>{{ desserts.title }}</h2>
-  <ul class="section__list">
-    {% for item in desserts.items %}
       <li class="section__item">
         <span class="section__item-name">{{ item.name }}</span>
         <span class="section__item-price">
