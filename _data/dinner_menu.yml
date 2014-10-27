@@ -1,0 +1,250 @@
+mains:
+  title: "mains"
+  name: "mains"
+  rank: 1
+  items:
+    - name: "Albacore tuna loin "
+      description: "za’atar rub, harissa"
+      price:
+        pair: 20
+        quad: 36
+
+    - name: "Braised beef brisket"
+      description: "natural jus, prepared horseradish"
+      price:
+        pair: 8
+        quad: 4
+
+    - name: "Chicken or fish schnitzel "
+      description: "chicken breast or tilapia filet, mixed seed crust, roast pepper sauce "
+      price:
+        pair: 12
+        quad: 22
+
+    - name: "Roast muscovy duck breast"
+      description: "currant jus"
+      price:
+        pair: 18
+        quad: 34
+
+    - name: "Falafel platter "
+      description: "hummus, tahini, pita, pickled turnips, smoked olives"
+      price:
+        pair: 18
+        quad: 32
+
+vegetables:
+  title: "vegetables"
+  name: "vegetables"
+  rank: 2
+  items:
+    - name: "Roast eggplant "
+      description: "tahini, herbs and chopped red onions"
+      price:
+        pair: 6
+        quad: 14
+
+    - name: "Tsimmis roast carrots "
+      description: "light herb and maple glaze"
+      price:
+        pair: 6
+        quad: 10
+    - name: "Caesar "
+      description: "Romaine, anchovy and garlic vinaigrette, pita chips"
+      price:
+        pair: 6
+        quad: 10
+
+    - name: "Seasonal greens "
+      description: "garlic and fresh chillies"
+      price:
+        pair: 7
+        quad: 12
+
+    - name: "Braised red cabbage"
+      description: "caraway"
+      price:
+        pair: 5
+        quad: 8
+
+    - name: "Chopped salad "
+      description: "tomato, onion, cucumber, lemon za’atar vinaigrette"
+      price:
+        pair: 8
+        quad: 14
+
+    - name: "Roast cauliflower "
+      description: "turmeric, za’atar, olive oil"
+      price:
+        pair: 6
+        quad: 10
+
+sides:
+  title: "sides"
+  name: "sides"
+  rank: 3
+  items:
+    - name: "Pearl cous-couse"
+      description: "with preserved lemon"
+      price:
+        pair: 6
+        quad: 10
+
+    - name: "Pierogies"
+      description: "potato and onions"
+      price:
+        pair: 6
+        quad: 10
+
+    - name: "Duck fat fries"
+      description: "herbs, spiced salt (available vegan)"
+      price:
+        pair: 6
+        quad: 10
+
+    - name: "Cabbage rolls"
+      description: "rice, cooked in tomato sauce"
+      price:
+        pair: 10
+        quad: 18
+
+    - name: "Mashed Potato"
+      description: "roast garlic"
+      price:
+        pair: 5
+        quad: 8
+
+    - name: "Pita"
+      description: "olive oil and za’atar"
+      price:
+        pair: 3
+        quad: 5
+
+appetizers:
+  title: "Appetizers"
+  name: "Appetizers"
+  rank: 4
+  items:
+    - name: "Smoked Olives"
+      description: "marinated and smoked in house"
+      price: 5
+
+    - name: "Pickles"
+      description: "mixed batches"
+      price: 5
+
+    - name: "Chopped liver"
+      description: "boiled egg, schmaltz onions, pita chips"
+      price: 12
+
+    - name: "Hummus"
+      description: "pita, tahini"
+      price: 6
+
+    - name: "Miami short ribs"
+      description: "with prune and manischevitz glaze, fresh chillies and scallions"
+      price: 12
+
+    - name: "Smoked salmon "
+      description: "dill, red onion, capers, pumpernickel"
+      price: 12
+
+    - name: "Pita Nachos"
+      description: "pita chips, garlic tahini, chopped salad,harissa"
+      price: 6
+
+    - name: "Jewish Ramen"
+      description: "egg noodles, matzoh balls, soft egg, brisket kreplach, veggies"
+      price:
+        pair: 14
+        quad: 24
+
+alacarte:
+  title: "A la carte"
+  name: "Alacarte"
+  rank: 5
+  items:
+    - name: "Za'atar rubbed tuna loin"
+      price: 22
+      description: "Albacore tuna on preserved lemon cous-cous with roast cauliflower"
+
+    - name: "Braised beef brisket"
+      price: 18
+      description: "on mashed potatoes with roast carrots, natural jus and prepared horseradish"
+    - name: "Roast duck breast"
+      price: 22
+      description: "on potato and onion pierogies, with braised cabbage,currantjus"
+
+    - name: "Schnitzel"
+      price: 16
+      description: "with cabbage rolls and garlic greens"
+
+    - name: "Falafel plate for one"
+      price: 12
+      description: "hummus, tahini, pita, pickled turnips, smoked olives"
+
+    - name: "Ramen for one"
+      price: 10
+      description: "egg noodles, matzoh balls, soft egg, brisket kreplach, veggies"
+
+drinks:
+  title: "Drinks"
+  name: "Drinks"
+  rank: 6
+  items:
+    - name: "Pop"
+      price: 2
+
+    - name: "Limonana"
+      price: 4
+
+    - name: "Juice"
+      price: 3
+
+    - name: "Tea"
+      price: 2.50
+
+    - name: "Espresso"
+      price: 2.75
+
+    - name: "Americano"
+      price: 2.75
+
+    - name: "Cappucino"
+      price: 3.50
+
+    - name: "Latte"
+      price: 4
+
+toppings:
+  title: "Toppings"
+  name: "Toppings"
+  rank: 7
+  items:
+    - name: "Gribenes"
+      description: "(crispy duck or chicken skin)"
+
+    - name: "Fried onions"
+
+    - name: "Roast pepper sauce/ Garlic tahini"
+
+    - name: "Brisket hash"
+
+    - name: "Sour cream"
+
+    - name: "Brisket Jus"
+
+desserts:
+  title: "Desserts"
+  name: "Desserts"
+  rank: 8
+  items:
+    - name: "Cookie plate"
+      price: 6
+      description: "Nechama’s strudel, rugelach, coconut macaroons"
+    - name: "Aba’s apple cake"
+      price: 6
+      description: "with vanilla ice cream"
+    - name: "Puff daddy"
+      price: 5
+      description: "deep fried puff pastry with pomegranate molasses and halva"

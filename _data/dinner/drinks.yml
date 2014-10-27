@@ -1,5 +1,6 @@
 title: "Drinks"
 name: "Drinks"
+rank: 6
 
 items:
   - name: "Pop"

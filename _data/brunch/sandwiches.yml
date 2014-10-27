@@ -1,5 +1,6 @@
 title: "Sandwiches"
 name: "Sandwiches"
+rank: 3
 
 items:
   - name: "Jewish banh mi "

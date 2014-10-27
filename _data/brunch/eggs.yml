@@ -1,5 +1,6 @@
 title: "Eggs"
 name: "Eggs"
+rank: 1
 
 items:
   - name: "Brisket hash"

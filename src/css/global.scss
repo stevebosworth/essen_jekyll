@@ -1,0 +1,54 @@
+@import "settings.scss";
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: $headerColor;
+  background-color: $primaryColor;
+  padding: 10px 0;
+}
+nav li {
+  display: inline-block;
+  text-align: center;
+
+  a {
+    color: $primaryColor;
+  }
+}
+
+.section__list {
+  margin: 0px $gutter;
+}
+
+.section__item {
+  list-style: none;
+
+  hr {
+    display: inline-block;
+  }
+}
+
+.section__item-name {
+  text-align: left;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.section__item-price {
+  float: right;
+  text-align: center;
+}
+
+.section__item-description {
+  display: block;
+  clear: both;
+}

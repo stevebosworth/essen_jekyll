@@ -1,5 +1,6 @@
 title: "Salads"
 name: "Salads"
+rank: 2
 
 items:
   - name: "Big salad"

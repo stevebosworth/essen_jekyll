@@ -21,10 +21,10 @@
     <div class="reservations">
       <a href="https://www.bookenda.com/essen?PartnerNumber=1&IdClientApplication=1774&IdServiceOccurence=0&Language=English#Reservation" target="_blank" onClick='window.open("https://www.bookenda.com/essen?PartnerNumber=1&IdClientApplication=1774&IdServiceOccurence=0&Language=English#Reservation","Bookenda","width=960,height=660,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,copyhistory=no,resizable=no"); return false; '><image src="http://www.bookenda.com/Images/badge-booknow_book_EN.png" style="border-style:none"/></a>
     </div>
-    <div class="header-logo">
+    <div class="row header-logo">
       <img src="/dist/img/logo-662x453.png" alt="">
     </div>
-    <nav>
+    <nav class="row">
       <ul class="main-nav">
         <li class="nav-item__dinner">
           <a href="#Dinner">Dinner</a>
@@ -40,6 +40,10 @@
             
               <li class="sub-nav__item--dinner">
                 <a href="#DinnerDesserts">Desserts</a>
+              </li>
+            
+              <li class="sub-nav__item--dinner">
+                <a href="#DinnerDrinks">Drinks</a>
               </li>
             
               <li class="sub-nav__item--dinner">
@@ -63,6 +67,10 @@
         <li class="nav-item__brunch">
           <a href="#Brunch">Brunch</a>
           <ul class="sub-nav__brunch">
+            
+              <li class="sub-nav__item--brunch">
+              <a href="#BrunchDrinks">Drinks</a>
+              </li>
             
               <li class="sub-nav__item--brunch">
               <a href="#BrunchEggs">Eggs</a>
@@ -91,667 +99,737 @@
 </header>
 
         <main class="main">
-          <section id="Dinner">
+          <section class="row" id="Dinner">
             
-<div class="section section-mains" id="DinnerMains">
-  <h2>mains</h2>
-  <ul class="section__list">
-    
-      <li class="section__item">
-        <span class="section__item-name">Albacore tuna loin </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="double-price">20</span>/
-            <span class="quad-price">36</span>
-          
-        </span>
-        
-          <span class="section__item-description">za’atar rub, harissa</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Braised beef brisket</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="double-price">8</span>/
-            <span class="quad-price">4</span>
-          
-        </span>
-        
-          <span class="section__item-description">natural jus, prepared horseradish</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Chicken or fish schnitzel </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="double-price">12</span>/
-            <span class="quad-price">22</span>
-          
-        </span>
-        
-          <span class="section__item-description">chicken breast or tilapia filet, mixed seed crust, roast pepper sauce </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Roast muscovy duck breast</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="double-price">18</span>/
-            <span class="quad-price">34</span>
-          
-        </span>
-        
-          <span class="section__item-description">currant jus</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Falafel platter </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="double-price">18</span>/
-            <span class="quad-price">32</span>
-          
-        </span>
-        
-          <span class="section__item-description">hummus, tahini, pita, pickled turnips, smoked olives</span>
-        
-      </li>
-    
-  </ul>
-</div>
 
 
-<div class="section section-vegetables" id="DinnerVegetables">
-  <h2>vegetables</h2>
-  <ul class="section__list">
-    
-      <li class="section__item">
-        <span class="section__item-name">Roast eggplant </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+  
+  <div class="section section-mains" id="DinnerMains">
+    <h2>mains</h2>
+    <ul class="section__list">
+      
+        <li class="section__item">
+          <span class="section__item-name">Albacore tuna loin </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">20</span>/<span class="quad-price">36</span>
+            
+          </span>
           
-            <span class="double-price">6</span>/
-            <span class="quad-price">14</span>
+            <span class="section__item-description">za’atar rub, harissa</span>
           
-        </span>
-        
-          <span class="section__item-description">tahini, herbs and chopped red onions</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Tsimmis roast carrots </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Braised beef brisket</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">8</span>/<span class="quad-price">4</span>
+            
+          </span>
           
-            <span class="double-price">6</span>/
-            <span class="quad-price">10</span>
+            <span class="section__item-description">natural jus, prepared horseradish</span>
           
-        </span>
-        
-          <span class="section__item-description">light herb and maple glaze</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Caesar </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Chicken or fish schnitzel </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">12</span>/<span class="quad-price">22</span>
+            
+          </span>
           
-            <span class="double-price">6</span>/
-            <span class="quad-price">10</span>
+            <span class="section__item-description">chicken breast or tilapia filet, mixed seed crust, roast pepper sauce </span>
           
-        </span>
-        
-          <span class="section__item-description">Romaine, anchovy and garlic vinaigrette, pita chips</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Seasonal greens </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Roast muscovy duck breast</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">18</span>/<span class="quad-price">34</span>
+            
+          </span>
           
-            <span class="double-price">7</span>/
-            <span class="quad-price">12</span>
+            <span class="section__item-description">currant jus</span>
           
-        </span>
-        
-          <span class="section__item-description">garlic and fresh chillies</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Braised red cabbage</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Falafel platter </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">18</span>/<span class="quad-price">32</span>
+            
+          </span>
           
-            <span class="double-price">5</span>/
-            <span class="quad-price">8</span>
+            <span class="section__item-description">hummus, tahini, pita, pickled turnips, smoked olives</span>
           
-        </span>
-        
-          <span class="section__item-description">caraway</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Chopped salad </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="double-price">8</span>/
-            <span class="quad-price">14</span>
-          
-        </span>
-        
-          <span class="section__item-description">tomato, onion, cucumber, lemon za’atar vinaigrette</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Roast cauliflower </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="double-price">6</span>/
-            <span class="quad-price"></span>
-          
-        </span>
-        
-          <span class="section__item-description">turmeric, za’atar, olive oil</span>
-        
-      </li>
-    
-  </ul>
-</div>
+        </li>
+      
+    </ul>
+  </div>
 
+  
+  <div class="section section-vegetables" id="DinnerVegetables">
+    <h2>vegetables</h2>
+    <ul class="section__list">
+      
+        <li class="section__item">
+          <span class="section__item-name">Roast eggplant </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">6</span>/<span class="quad-price">14</span>
+            
+          </span>
+          
+            <span class="section__item-description">tahini, herbs and chopped red onions</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Tsimmis roast carrots </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">6</span>/<span class="quad-price">10</span>
+            
+          </span>
+          
+            <span class="section__item-description">light herb and maple glaze</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Caesar </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">6</span>/<span class="quad-price">10</span>
+            
+          </span>
+          
+            <span class="section__item-description">Romaine, anchovy and garlic vinaigrette, pita chips</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Seasonal greens </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">7</span>/<span class="quad-price">12</span>
+            
+          </span>
+          
+            <span class="section__item-description">garlic and fresh chillies</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Braised red cabbage</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">5</span>/<span class="quad-price">8</span>
+            
+          </span>
+          
+            <span class="section__item-description">caraway</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Chopped salad </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">8</span>/<span class="quad-price">14</span>
+            
+          </span>
+          
+            <span class="section__item-description">tomato, onion, cucumber, lemon za’atar vinaigrette</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Roast cauliflower </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">6</span>/<span class="quad-price">10</span>
+            
+          </span>
+          
+            <span class="section__item-description">turmeric, za’atar, olive oil</span>
+          
+        </li>
+      
+    </ul>
+  </div>
 
-<div class="section section-sides" id="DinnerSides">
-  <h2>sides</h2>
-  <ul class="section__list">
-    
-      <li class="section__item">
-        <span class="section__item-name">Pearl cous-couse</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+  
+  <div class="section section-sides" id="DinnerSides">
+    <h2>sides</h2>
+    <ul class="section__list">
+      
+        <li class="section__item">
+          <span class="section__item-name">Pearl cous-couse</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">6</span>/<span class="quad-price">10</span>
+            
+          </span>
           
-            <span class="double-price">6</span>/
-            <span class="quad-price">10</span>
+            <span class="section__item-description">with preserved lemon</span>
           
-        </span>
-        
-          <span class="section__item-description">with preserved lemon</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Pierogies</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Pierogies</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">6</span>/<span class="quad-price">10</span>
+            
+          </span>
           
-            <span class="double-price">6</span>/
-            <span class="quad-price">10</span>
+            <span class="section__item-description">potato and onions</span>
           
-        </span>
-        
-          <span class="section__item-description">potato and onions</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Duck fat fries</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Duck fat fries</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">6</span>/<span class="quad-price">10</span>
+            
+          </span>
           
-            <span class="double-price">6</span>/
-            <span class="quad-price">10</span>
+            <span class="section__item-description">herbs, spiced salt (available vegan)</span>
           
-        </span>
-        
-          <span class="section__item-description">herbs, spiced salt (available vegan)</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Cabbage rolls</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Cabbage rolls</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">10</span>/<span class="quad-price">18</span>
+            
+          </span>
           
-            <span class="double-price">10</span>/
-            <span class="quad-price">18</span>
+            <span class="section__item-description">rice, cooked in tomato sauce</span>
           
-        </span>
-        
-          <span class="section__item-description">rice, cooked in tomato sauce</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Mashed Potato</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Mashed Potato</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">5</span>/<span class="quad-price">8</span>
+            
+          </span>
           
-            <span class="double-price">5</span>/
-            <span class="quad-price">8</span>
+            <span class="section__item-description">roast garlic</span>
           
-        </span>
-        
-          <span class="section__item-description">roast garlic</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Pita</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Pita</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">3</span>/<span class="quad-price">5</span>
+            
+          </span>
           
-            <span class="double-price">3</span>/
-            <span class="quad-price">5</span>
+            <span class="section__item-description">olive oil and za’atar</span>
           
-        </span>
-        
-          <span class="section__item-description">olive oil and za’atar</span>
-        
-      </li>
-    
-  </ul>
-</div>
+        </li>
+      
+    </ul>
+  </div>
 
+  
+  <div class="section section-Appetizers" id="DinnerAppetizers">
+    <h2>Appetizers</h2>
+    <ul class="section__list">
+      
+        <li class="section__item">
+          <span class="section__item-name">Smoked Olives</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">5</span>
+            
+          </span>
+          
+            <span class="section__item-description">marinated and smoked in house</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Pickles</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">5</span>
+            
+          </span>
+          
+            <span class="section__item-description">mixed batches</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Chopped liver</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">12</span>
+            
+          </span>
+          
+            <span class="section__item-description">boiled egg, schmaltz onions, pita chips</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Hummus</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">6</span>
+            
+          </span>
+          
+            <span class="section__item-description">pita, tahini</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Miami short ribs</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">12</span>
+            
+          </span>
+          
+            <span class="section__item-description">with prune and manischevitz glaze, fresh chillies and scallions</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Smoked salmon </span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">12</span>
+            
+          </span>
+          
+            <span class="section__item-description">dill, red onion, capers, pumpernickel</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Pita Nachos</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">6</span>
+            
+          </span>
+          
+            <span class="section__item-description">pita chips, garlic tahini, chopped salad,harissa</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Jewish Ramen</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="double-price">14</span>/<span class="quad-price">24</span>
+            
+          </span>
+          
+            <span class="section__item-description">egg noodles, matzoh balls, soft egg, brisket kreplach, veggies</span>
+          
+        </li>
+      
+    </ul>
+  </div>
 
-<div class="section section-Appetizers" id="DinnerAppetizers">
-  <h2>Appetizers</h2>
-  <ul class="section__list">
-    
-      <li class="section__item">
-        <span class="section__item-name">Smoked Olives</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+  
+  <div class="section section-Alacarte" id="DinnerAlacarte">
+    <h2>A la carte</h2>
+    <ul class="section__list">
+      
+        <li class="section__item">
+          <span class="section__item-name">Za'atar rubbed tuna loin</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">22</span>
+            
+          </span>
           
-            <span class="price">5</span>
+            <span class="section__item-description">Albacore tuna on preserved lemon cous-cous with roast cauliflower</span>
           
-        </span>
-        
-          <span class="section__item-description">marinated and smoked in house</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Pickles</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Braised beef brisket</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">18</span>
+            
+          </span>
           
-            <span class="price">5</span>
+            <span class="section__item-description">on mashed potatoes with roast carrots, natural jus and prepared horseradish</span>
           
-        </span>
-        
-          <span class="section__item-description">mixed batches</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Chopped liver</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Roast duck breast</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">22</span>
+            
+          </span>
           
-            <span class="price">12</span>
+            <span class="section__item-description">on potato and onion pierogies, with braised cabbage,currantjus</span>
           
-        </span>
-        
-          <span class="section__item-description">boiled egg, schmaltz onions, pita chips</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Hummus</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Schnitzel</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">16</span>
+            
+          </span>
           
-            <span class="price">6</span>
+            <span class="section__item-description">with cabbage rolls and garlic greens</span>
           
-        </span>
-        
-          <span class="section__item-description">pita, tahini</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Miami short ribs</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Falafel plate for one</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">12</span>
+            
+          </span>
           
-            <span class="price">12</span>
+            <span class="section__item-description">hummus, tahini, pita, pickled turnips, smoked olives</span>
           
-        </span>
-        
-          <span class="section__item-description">with prune and manischevitz glaze, fresh chillies and scallions</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Smoked salmon </span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Ramen for one</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">10</span>
+            
+          </span>
           
-            <span class="price">12</span>
+            <span class="section__item-description">egg noodles, matzoh balls, soft egg, brisket kreplach, veggies</span>
           
-        </span>
-        
-          <span class="section__item-description">dill, red onion, capers, pumpernickel</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Pita Nachos</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">6</span>
-          
-        </span>
-        
-          <span class="section__item-description">pita chips, garlic tahini, chopped salad,harissa</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Jewish Ramen</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="double-price">14</span>/
-            <span class="quad-price">24</span>
-          
-        </span>
-        
-          <span class="section__item-description">egg noodles, matzoh balls, soft egg, brisket kreplach, veggies</span>
-        
-      </li>
-    
-  </ul>
-</div>
+        </li>
+      
+    </ul>
+  </div>
 
+  
+  <div class="section section-Drinks" id="DinnerDrinks">
+    <h2>Drinks</h2>
+    <ul class="section__list">
+      
+        <li class="section__item">
+          <span class="section__item-name">Pop</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">2</span>
+            
+          </span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Limonana</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">4</span>
+            
+          </span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Juice</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">3</span>
+            
+          </span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Tea</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">2.5</span>
+            
+          </span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Espresso</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">2.75</span>
+            
+          </span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Americano</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">2.75</span>
+            
+          </span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Cappucino</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">3.5</span>
+            
+          </span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Latte</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">4</span>
+            
+          </span>
+          
+        </li>
+      
+    </ul>
+  </div>
 
-<div class="section section-Drinks" id="DinnerDrinks">
-  <h2>Drinks</h2>
-  <ul class="section__list">
-    
-      <li class="section__item">
-        <span class="section__item-name">Pop</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+  
+  <div class="section section-Toppings" id="DinnerToppings">
+    <h2>Toppings</h2>
+    <ul class="section__list">
+      
+        <li class="section__item">
+          <span class="section__item-name">Gribenes</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price"></span>
+            
+          </span>
           
-            <span class="price">2</span>
+            <span class="section__item-description">(crispy duck or chicken skin)</span>
           
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Limonana</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Fried onions</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price"></span>
+            
+          </span>
           
-            <span class="price">4</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Roast pepper sauce/ Garlic tahini</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price"></span>
+            
+          </span>
           
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Juice</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Brisket hash</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price"></span>
+            
+          </span>
           
-            <span class="price">3</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Sour cream</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price"></span>
+            
+          </span>
           
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Tea</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Brisket Jus</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price"></span>
+            
+          </span>
           
-            <span class="price">2.5</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Espresso</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">2.75</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Americano</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">2.75</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Cappucino</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">3.5</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Latte</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">4</span>
-          
-        </span>
-        
-      </li>
-    
-  </ul>
-</div>
+        </li>
+      
+    </ul>
+  </div>
 
+  
+  <div class="section section-Desserts" id="DinnerDesserts">
+    <h2>Desserts</h2>
+    <ul class="section__list">
+      
+        <li class="section__item">
+          <span class="section__item-name">Cookie plate</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">6</span>
+            
+          </span>
+          
+            <span class="section__item-description">Nechama’s strudel, rugelach, coconut macaroons</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Aba’s apple cake</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">6</span>
+            
+          </span>
+          
+            <span class="section__item-description">with vanilla ice cream</span>
+          
+        </li>
+      
+        <li class="section__item">
+          <span class="section__item-name">Puff daddy</span>
+          <hr>
+          <span class="section__item-price">
+            <span class="currency">$</span>
+            
+              <span class="price">5</span>
+            
+          </span>
+          
+            <span class="section__item-description">deep fried puff pastry with pomegranate molasses and halva</span>
+          
+        </li>
+      
+    </ul>
+  </div>
 
-<div class="section section-Alacarte" id="DinnerAlacarte">
-  <h2>A la carte</h2>
-  <ul class="section__list">
-    
-      <li class="section__item">
-        <span class="section__item-name">Za'atar rubbed tuna loin</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">22</span>
-          
-        </span>
-        
-          <span class="section__item-description">Albacore tuna on preserved lemon cous-cous with roast cauliflower</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Braised beef brisket</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">18</span>
-          
-        </span>
-        
-          <span class="section__item-description">on mashed potatoes with roast carrots, natural jus and prepared horseradish</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Roast duck breast</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">22</span>
-          
-        </span>
-        
-          <span class="section__item-description">on potato and onion pierogies, with braised cabbage,currantjus</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Schnitzel</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">16</span>
-          
-        </span>
-        
-          <span class="section__item-description">with cabbage rolls and garlic greens</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Falafel plate for one</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">12</span>
-          
-        </span>
-        
-          <span class="section__item-description">hummus, tahini, pita, pickled turnips, smoked olives</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Ramen for one</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">10</span>
-          
-        </span>
-        
-          <span class="section__item-description">egg noodles, matzoh balls, soft egg, brisket kreplach, veggies</span>
-        
-      </li>
-    
-  </ul>
-</div>
-
-
-<div class="section section-Toppings" id="DinnerToppings">
-  <h2>Toppings</h2>
-  <ul class="section__list">
-    
-      <li class="section__item">
-        <span class="section__item-name">Gribenes</span>
-        
-          <span class="section__item-description">(crispy duck or chicken skin)</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Fried onions</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Roast pepper sauce/ Garlic tahini</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Brisket hash</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Sour cream</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Brisket Jus</span>
-        
-      </li>
-    
-  </ul>
-</div>
-
-
-<div class="section section-Desserts" id="DinnerDesserts">
-  <h2>Desserts</h2>
-  <ul class="section__list">
-    
-      <li class="section__item">
-        <span class="section__item-name">Cookie plate</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">6</span>
-          
-        </span>
-        
-          <span class="section__item-description">Nechama’s strudel, rugelach, coconut macaroons</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Aba’s apple cake</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">6</span>
-          
-        </span>
-        
-          <span class="section__item-description">with vanilla ice cream</span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Puff daddy</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">5</span>
-          
-        </span>
-        
-          <span class="section__item-description">deep fried puff pastry with pomegranate molasses and halva</span>
-        
-      </li>
-    
-  </ul>
-</div>
 
           </section>
-          <section id="Brunch">
+          <section class="row" id="Brunch">
             
 <div class="section section-Eggs" id="BrunchEggs">
   <h2>Eggs</h2>
@@ -1079,97 +1157,9 @@
 </div>
 
 
-<div class="section section-Drinks" id="BrunchDrinks">
-  <h2>Drinks</h2>
+<div class="section section-" id="Brunch">
+  <h2></h2>
   <ul class="section__list">
-    
-      <li class="section__item">
-        <span class="section__item-name">Pop</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">2</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Limonana</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">4</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Juice</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">3</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Tea</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">2.5</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Espresso</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">2.75</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Americano</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">2.75</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Cappucino</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">3.5</span>
-          
-        </span>
-        
-      </li>
-    
-      <li class="section__item">
-        <span class="section__item-name">Latte</span>
-        <span class="section__item-price">
-          <span class="currency">$</span>
-          
-            <span class="price">4</span>
-          
-        </span>
-        
-      </li>
     
   </ul>
 </div>

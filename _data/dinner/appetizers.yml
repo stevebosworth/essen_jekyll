@@ -1,5 +1,6 @@
 title: "Appetizers"
 name: "Appetizers"
+rank: 5
 
 items:
   - name: "Smoked Olives"

@@ -1,5 +1,6 @@
 title: "vegetables"
 name: "vegetables"
+rank: 4
 
 items:
   - name: "Roast eggplant "

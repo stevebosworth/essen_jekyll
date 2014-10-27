@@ -1,5 +1,6 @@
 title: "Desserts"
 name: "Desserts"
+rank: 8
 
 items:
   - name: "Cookie plate"

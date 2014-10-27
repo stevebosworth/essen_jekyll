@@ -18,6 +18,7 @@ var uglify      = require('gulp-uglify');
 var concat      = require('gulp-concat');
 var imagemin    = require('gulp-imagemin');
 var source      = require('vinyl-source-stream');
+var utils       = require('gulp-util');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -59,8 +60,8 @@ gulp.task('sass', function () {
     gulp.src('src/css/**/main.scss')
         .pipe(sass({
             includePaths: ['scss', './node_modules/zurb-foundation/css'],
-            onError: browserSync.notify,
-            sourceMap: true
+            sourceMap: true,
+            errLogToConsole: true
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(minifyCSS())
@@ -93,7 +94,7 @@ gulp.task('images', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('src/css/*.scss', ['sass']);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_config.yml', '_includes/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_config.yml', '_includes/*.html', '_data/**/*'], ['jekyll-rebuild']);
     gulp.watch('src/js/*.js', ['js']);
     gulp.watch('src/images/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);
 });
