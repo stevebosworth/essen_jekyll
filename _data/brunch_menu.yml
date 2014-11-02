@@ -1,0 +1,149 @@
+eggs:
+  title: "Eggs"
+  name: "Eggs"
+  rank: 1
+
+  items:
+    - name: "Brisket hash"
+      price: 14
+      description: "peppers, potatoes, onions, fresh chilies, herbs, poached eggs"
+
+    - name: "Fried eggs"
+      price: 12
+      description: "up, down or scrambled. Fries, salad and toast. Served with your choice of smoked salmon, brie, or beef salami"
+
+salads:
+  title: "Salads"
+  name: "Salads"
+  rank: 2
+
+  items:
+    - name: "Big salad"
+      description: "romaine, boiled eggs, chickpeas, peppers, onions, olives and lemon-za’atar dressing"
+      price: 12
+
+    - name: "Chopped salad"
+      description: "tomato, cucumber and onion, lemon-za’atar dressing"
+      price: 8
+
+    - name: "Caesar salad"
+      description: "tromaine, garlic anchovy dressing, pita chips"
+      price: 8
+
+sandwiches:
+  title: "Sandwiches"
+  name: "Sandwiches"
+  rank: 3
+
+  items:
+    - name: "Jewish banh mi "
+      price: 12
+      description: "chopped chicken liver, fried beef salami, grainy mustard, pickled carrots, red onion"
+
+    - name: "Bagel "
+      price: 12
+      description: "house smoked salmon, dill whipped cream cheese, lettuce, red onions, capers"
+
+    - name: "Schnitzel "
+      price: 12
+      description: "chicken breast or tilapia filet, spicy roast pepper sauce, garlic mayo"
+
+    - name: "Brisket "
+      price: 12
+      description: "horseradish, garlic mayo, grainy mustard, red onion and lettuce"
+
+    - name: "Breakfast sandwich "
+      price: 8
+      description: "challa, plain omelet, brie, lettuce, tomato, garlic mayo"
+
+sides:
+  title: "Sides"
+  name: "Sides"
+  rank: 4
+
+  items:
+    - name: "Fried beef salami"
+      price: 5
+
+    - name: "Smoked salmon"
+      price: 6
+
+    - name: "Sautéed mushrooms"
+      price: 5
+
+    - name: "Homefries"
+      price: 5
+
+    - name: "Toast"
+      price: 1
+
+    - name: "Gribenes"
+      price: 3
+
+    - name: "Hollandaise"
+      price: 3
+      description: "Available on weekends only for brunch"
+
+    - name: "Salad"
+      price: 3
+
+
+
+
+mains:
+  title: "Brunch sat & sun"
+  name: "mains"
+  rank: 5
+
+  items:
+    - name: "Potato rösti"
+      price: 14
+      description: "crispy potato pancake topped with dill whipped cream cheese, house smoked salmon, greens, red onions and capers"
+
+    - name: "Eggs benedict"
+      price: 12
+      description: "2 poached eggs with your choice of brie, smoked salmon or mushrooms, on english muffin, with hollandaise, salad and homefries"
+
+    - name: "Challa french toast"
+      price: 10
+      description: "2 thick cuts slices of challa, egg dipped, served with vanilla Chantilly and berry maple compote"
+
+    - name: "Omelette"
+      price: 12
+      description: "Mushrooms, beef salami, spicy roast pepper sauce, served with homefries and salad"
+
+    - name: "Shak shuka"
+      price: 12
+      description: "eggs poached in spicy tomato sauce with veggies, served with pita"
+
+
+drinks:
+  title: "Drinks"
+  name: "Drinks"
+  rank: 6
+
+  items:
+    - name: "Pop"
+      price: 2
+
+    - name: "Limonana"
+      price: 4
+
+    - name: "Juice"
+      price: 3
+
+    - name: "Tea"
+      price: 2.50
+
+    - name: "Espresso"
+      price: 2.75
+
+    - name: "Americano"
+      price: 2.75
+
+    - name: "Cappucino"
+      price: 3.50
+
+    - name: "Latte"
+      price: 4
+

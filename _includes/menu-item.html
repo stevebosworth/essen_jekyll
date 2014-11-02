@@ -1,0 +1,22 @@
+<h2>{{ menu_item.title }}</h2>
+<ul class="section__list">
+  {% for menuItem in menu_item.items %}
+    <li class="section__item">
+      <div class="wrapper">
+        <span class="section__item-name">{{ menuItem.name }}</span>
+        <span class="section__item-price">
+          <span class="currency">$</span>
+          {% if menuItem.price.pair %}
+          <span class="double-price">{{ menuItem.price.pair }}</span>/<span class="quad-price">{{ menuItem.price.quad }}</span>
+          {% else %}
+          <span class="price">{{ menuItem.price }}</span>
+          {% endif %}
+        </span>
+        <span class="dotted-line"></span>
+      </div>
+      {% if menuItem.description %}
+        <span class="section__item-description">{{ menuItem.description }}</span>
+      {% endif %}
+    </li>
+  {% endfor %}
+</ul>

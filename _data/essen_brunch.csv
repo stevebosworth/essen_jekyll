@@ -1,0 +1,171 @@
+title,mains
+name,mains
+rank,1
+name,"Albacore tuna loin "
+description,"za’atar rub, harissa"
+pair,20
+quad,36
+name,"Braised beef brisket"
+description,"natural jus, prepared horseradish"
+pair,8
+quad,4
+name,"Chicken or fish schnitzel "
+description,"chicken breast or tilapia filet, mixed seed crust, roast pepper sauce "
+pair,12
+quad,22
+name,"Roast muscovy duck breast"
+description,"currant jus"
+pair,18
+quad,34
+name,"Falafel platter "
+description,"hummus, tahini, pita, pickled turnips, smoked olives"
+pair,18
+quad,32
+title,vegetables
+name,vegetables
+rank,2
+name,"Roast eggplant "
+description,"tahini, herbs and chopped red onions"
+pair,6
+quad,14
+name,"Tsimmis roast carrots "
+description,"light herb and maple glaze"
+pair,6
+quad,10
+name,"Caesar "
+description,"Romaine, anchovy and garlic vinaigrette, pita chips"
+pair,6
+quad,10
+name,"Seasonal greens "
+description,"garlic and fresh chillies"
+pair,7
+quad,12
+name,"Braised red cabbage"
+description,caraway
+pair,5
+quad,8
+name,"Chopped salad "
+description,"tomato, onion, cucumber, lemon za’atar vinaigrette"
+pair,8
+quad,14
+name,"Roast cauliflower "
+description,"turmeric, za’atar, olive oil"
+pair,6
+quad,10
+title,sides
+name,sides
+rank,3
+name,"Pearl cous-couse"
+description,"with preserved lemon"
+pair,6
+quad,10
+name,Pierogies
+description,"potato and onions"
+pair,6
+quad,10
+name,"Duck fat fries"
+description,"herbs, spiced salt (available vegan)"
+pair,6
+quad,10
+name,"Cabbage rolls"
+description,"rice, cooked in tomato sauce"
+pair,10
+quad,18
+name,"Mashed Potato"
+description,"roast garlic"
+pair,5
+quad,8
+name,Pita
+description,"olive oil and za’atar"
+pair,3
+quad,5
+title,Appetizers
+name,Appetizers
+rank,4
+name,"Smoked Olives"
+description,"marinated and smoked in house"
+price,5
+name,Pickles
+description,"mixed batches"
+price,5
+name,"Chopped liver"
+description,"boiled egg, schmaltz onions, pita chips"
+price,12
+name,Hummus
+description,"pita, tahini"
+price,6
+name,"Miami short ribs"
+description,"with prune and manischevitz glaze, fresh chillies and scallions"
+price,12
+name,"Smoked salmon "
+description,"dill, red onion, capers, pumpernickel"
+price,12
+name,"Pita Nachos"
+description,"pita chips, garlic tahini, chopped salad,harissa"
+price,6
+name,"Jewish Ramen"
+description,"egg noodles, matzoh balls, soft egg, brisket kreplach, veggies"
+pair,14
+quad,24
+title,"A la carte"
+name,Alacarte
+rank,5
+name,"Za'atar rubbed tuna loin"
+price,22
+description,"Albacore tuna on preserved lemon cous-cous with roast cauliflower"
+name,"Braised beef brisket"
+price,18
+description,"on mashed potatoes with roast carrots, natural jus and prepared horseradish"
+name,"Roast duck breast"
+price,22
+description,"on potato and onion pierogies, with braised cabbage,currantjus"
+name,Schnitzel
+price,16
+description,"with cabbage rolls and garlic greens"
+name,"Falafel plate for one"
+price,12
+description,"hummus, tahini, pita, pickled turnips, smoked olives"
+name,"Ramen for one"
+price,10
+description,"egg noodles, matzoh balls, soft egg, brisket kreplach, veggies"
+title,Drinks
+name,Drinks
+rank,6
+name,Pop
+price,2
+name,Limonana
+price,4
+name,Juice
+price,3
+name,Tea
+price,2.5
+name,Espresso
+price,2.75
+name,Americano
+price,2.75
+name,Cappucino
+price,3.5
+name,Latte
+price,4
+title,Toppings
+name,Toppings
+rank,7
+name,Gribenes
+description,"(crispy duck or chicken skin)"
+name,"Fried onions"
+name,"Roast pepper sauce/ Garlic tahini"
+name,"Brisket hash"
+name,"Sour cream"
+name,"Brisket Jus"
+title,Desserts
+name,Desserts
+rank,8
+name,"Cookie plate"
+price,6
+description,"Nechama’s strudel, rugelach, coconut macaroons"
+name,"Aba’s apple cake"
+price,6
+description,"with vanilla ice cream"
+name,"Puff daddy"
+price,5
+description,"deep fried puff pastry with pomegranate molasses and halva"
