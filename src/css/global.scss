@@ -1,10 +1,22 @@
-@import "settings.scss";
+@import "foundation/foundation/_settings.scss";
+@import "variables.scss";
 
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: $font-family-sans-serif;
+}
+
+main {
+  margin-top: $column-gutter;
+}
+
+ul,
+ul li ol,
+ul li ul {
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
   font-family: "PT Sans", sans-serif;
   font-weight: bold;
 }
@@ -12,8 +24,8 @@ h1, h2, h3, h4, h5, h6 {
 h2 {
   text-align: center;
   text-transform: uppercase;
-  color: $headerColor;
-  background-color: $primaryColor;
+  color: $body-bg;
+  background-color: $primary-color;
   padding: 10px 0;
 }
 nav li {
@@ -21,34 +33,152 @@ nav li {
   text-align: center;
 
   a {
-    color: $primaryColor;
+    color: $primary-color;
   }
 }
 
+.header-logo {
+  padding: $column-gutter;
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.reservations {
+  z-index: $zindex5;
+  background: $body-bg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  a {
+    display: inline-block;
+    margin: -2px;
+    text-align: center;
+  }
+}
+
+/*============================================================================
+  # Navigation
+==============================================================================*/
+
+.main-nav {
+  text-align: center;
+}
+
+.main-nav__item {
+  display: inline-block;
+  text-align: center;
+
+  a {
+    color: $jet;
+    font-size: rem-calc(22);
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: rem-calc(38);
+    display: block;
+
+    &.nav-item__dinner {
+      font-size: rem-calc(48);
+      border-bottom: 4px solid $secondary-color;
+    }
+  }
+}
+
+.sub-nav {
+  display: none;
+
+  background-color: $secondary-color;
+  text-align: center;
+  margin-top: -4px;
+
+  li {
+    float: none;
+  }
+
+  li a {
+    text-transform: uppercase;
+    color: $jet;
+    font-style: italic;
+  }
+}
+
+.sub-nav__brunch {
+  display: none;
+}
+
+
+/*============================================================================
+  # Menu Items and Sections
+==============================================================================*/
+
 .section__list {
-  margin: 0px $gutter;
+  padding: $column-gutter;
 }
 
 .section__item {
   list-style: none;
 
-  hr {
+  .wrapper {
+    position: relative;
+    display: block;
+    height: 20px;
+  }
+
+  .dotted-line {
     display: inline-block;
+    width: 100%;
+    height: 2px;
+    border-bottom: dotted;
+    position: absolute;
+    top: 14px;
+    left: 0;
   }
 }
 
+.section__item-name,
+.section__item-price {
+  position: absolute;
+  top: 0;
+  font-weight: 900;
+  font-style: italic;
+  z-index: $zindex1;
+  background: $body-bg;
+}
+
 .section__item-name {
-  text-align: left;
+  left: 0;
   text-transform: capitalize;
-  font-weight: bold;
+  padding-right: 5px;
 }
 
 .section__item-price {
-  float: right;
+  right: 0;
   text-align: center;
+  padding-left: 5px;
 }
 
 .section__item-description {
   display: block;
   clear: both;
 }
+
+/*============================================================================
+  #  Dinner
+==============================================================================*/
+.row-dinner {
+  .section-mains,
+  .section-vegetables {
+    background-color: $tertiary-color;
+
+    .section__item-name,
+    .section__item-price {
+      background: $tertiary-color;
+    }
+  }
+}
+

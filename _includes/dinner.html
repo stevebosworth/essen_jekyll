@@ -3,25 +3,6 @@
 {% for item in site.data.dinner_menu %}
   {% assign menu_item = item[1] %}
   <div class="section section-{{ menu_item.name }}" id="Dinner{{ menu_item.name | capitalize}}">
-    <h2>{{ menu_item.title }}</h2>
-    <ul class="section__list">
-      {% for menuItem in menu_item.items %}
-        <li class="section__item">
-          <span class="section__item-name">{{ menuItem.name }}</span>
-          <hr>
-          <span class="section__item-price">
-            <span class="currency">$</span>
-            {% if menuItem.price.pair %}
-              <span class="double-price">{{ menuItem.price.pair }}</span>/<span class="quad-price">{{ menuItem.price.quad }}</span>
-            {% else %}
-              <span class="price">{{ menuItem.price }}</span>
-            {% endif %}
-          </span>
-          {% if menuItem.description %}
-            <span class="section__item-description">{{ menuItem.description }}</span>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+    {% include menu-item.html %}
   </div>
 {% endfor %}

@@ -72,10 +72,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function () {
-  return browserify('./src/js/main.js')
-        .bundle()
-        //Pass desired output filename to vinyl-source-stream
-        .pipe(source('main.js'))
+  return gulp.src('src/**/*.js')
         // Start piping stream to tasks!
         .pipe(gulp.dest('./dist/js/'));
 });
