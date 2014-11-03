@@ -13,7 +13,6 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/dist/css/build.min.css">
         <!-- endbuild -->
-
     </head>
     <body>
       <div class="site">
@@ -26,8 +25,10 @@
             {% include brunch.html %}
           </section>
         </main>
+        {% include footer.html %}
       </div>
     <!-- build:js(app) /src/js/scripts.js -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
     <script src="/dist/js/main.js"></script>
     <!-- endbuild -->
     </body>

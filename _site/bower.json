@@ -1,0 +1,22 @@
+{
+  "name": "essen",
+  "version": "0.0.0",
+  "homepage": "essentoronto.com",
+  "authors": [
+    "stevebosworth stevebosworth@gmail.com"
+  ],
+  "description": "Esset Toronto Restaurant",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "~1.1.4"
+  }
+}

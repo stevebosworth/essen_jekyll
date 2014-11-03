@@ -28,6 +28,81 @@ h2 {
   background-color: $primary-color;
   padding: 10px 0;
 }
+
+.header-logo {
+  padding: 70px;
+  padding-bottom: 140px;
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.reservations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: $zindex5;
+  background: $body-bg;
+  overflow: hidden;
+
+  a {
+    color: $secondary-color;
+  }
+
+  span {
+    color: $primary-color;
+  }
+
+  &.unsticky {
+    height: 0;
+  }
+
+  &.sticky {
+    position: fixed;
+  }
+}
+
+.reservations, .social-media {
+   a {
+    font-size: rem-calc(30);
+    display: inline-block;
+    margin: 0 -2px;
+    text-align: center;
+
+    span {
+      display: block;
+      font-size: rem-calc(12);
+    }
+  }
+}
+
+header {
+  position: relative;
+}
+
+/*============================================================================
+  # Navigation
+==============================================================================*/
+.nav-wrapper {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+
+  &.unsticky {
+    height: 0;
+  }
+
+  &.sticky {
+    position: fixed;
+    top: 65px;
+    z-index: $zindex5;
+  }
+}
+
 nav li {
   display: inline-block;
   text-align: center;
@@ -37,37 +112,10 @@ nav li {
   }
 }
 
-.header-logo {
-  padding: $column-gutter;
-
-  img {
-    margin: 0 auto;
-    display: block;
-  }
-}
-
-.reservations {
-  z-index: $zindex5;
-  background: $body-bg;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-
-  a {
-    display: inline-block;
-    margin: -2px;
-    text-align: center;
-  }
-}
-
-/*============================================================================
-  # Navigation
-==============================================================================*/
-
 .main-nav {
   text-align: center;
+  background: $body-bg;
+  padding-top: 12px;
 }
 
 .main-nav__item {
@@ -82,7 +130,7 @@ nav li {
     line-height: rem-calc(38);
     display: block;
 
-    &.nav-item__dinner {
+    &.active {
       font-size: rem-calc(48);
       border-bottom: 4px solid $secondary-color;
     }
@@ -90,14 +138,16 @@ nav li {
 }
 
 .sub-nav {
-  display: none;
-
+  display: block;
   background-color: $secondary-color;
   text-align: center;
   margin-top: -4px;
 
   li {
+    width: 24%;
     float: none;
+    display: inline-block;
+    margin-left: 0;
   }
 
   li a {
@@ -122,10 +172,12 @@ nav li {
 
 .section__item {
   list-style: none;
+  padding-bottom: 5px;
 
   .wrapper {
     position: relative;
     display: block;
+    margin-bottom: 3px;
     height: 20px;
   }
 
@@ -163,8 +215,28 @@ nav li {
 }
 
 .section__item-description {
+  line-height: 1;
   display: block;
   clear: both;
+}
+
+@media #{$medium-up} {
+  .section__item {
+    .wrapper {
+      height: 35px;
+    }
+
+    .dotted-line {
+      top: 27px;
+    }
+  }
+
+
+
+  .section__item-name,
+  .section__item-price {
+    font-size: rem-calc(25);
+  }
 }
 
 /*============================================================================
@@ -182,3 +254,18 @@ nav li {
   }
 }
 
+
+/*============================================================================
+  # Footer
+==============================================================================*/
+footer {
+  text-align: center;
+
+  span {
+    display: block;
+  }
+
+  .address {
+    margin-top: 25px;
+  }
+}

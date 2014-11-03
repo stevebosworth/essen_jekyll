@@ -51,7 +51,7 @@ gulp.task('browser-sync', ['build', 'jekyll-build'], function() {
     });
 });
 
-gulp.task('build', ['sass', 'js', "images"]);
+gulp.task('build', ['sass', 'js', "images", "fonts"]);
 
 /**
  * Compile files from src into both _site/dist/css (for live injecting) and dist/css (for future jekyll builds)
@@ -71,10 +71,16 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('fonts', function () {
+  gulp.src('src/fonts/**/*.*')
+    .pipe(gulp.dest('dist/fonts'));
+});
+
 gulp.task('js', function () {
-  return gulp.src('src/**/*.js')
-        // Start piping stream to tasks!
-        .pipe(gulp.dest('./dist/js/'));
+  gulp.src('src/js/*.js')
+    // Start piping stream to tasks!
+    .pipe(gulp.dest('./dist/js/'))
+    .pipe(gulp.dest('_site/dist/js'));
 });
 
 gulp.task('images', function() {
