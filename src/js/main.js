@@ -6,7 +6,7 @@ essen.init = function () {
 
   $(window).on('scroll', essen.detectScroll);
   $(window).on('load', essen.equalHeights);
-  $(window).on('resize', essen.debounce(essen.onResize(), 200));
+  $(window).on('resize', essen.debounce(essen.onResize, 200));
 };
 
 essen.cacheSelectors = function () {
@@ -22,6 +22,7 @@ essen.cacheSelectors = function () {
 };
 
 essen.onResize = function () {
+  console.log('resize');
   essen.cache.siteHeaderHeight = essen.cache.$siteHeader.outerHeight();
 };
 

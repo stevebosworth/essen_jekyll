@@ -81,6 +81,9 @@ gulp.task('js', function () {
     // Start piping stream to tasks!
     .pipe(gulp.dest('./dist/js/'))
     .pipe(gulp.dest('_site/dist/js'));
+
+  gulp.src('bower_components/**/*.*')
+    .pipe(gulp.dest('_site/bower_components'));
 });
 
 gulp.task('images', function() {
