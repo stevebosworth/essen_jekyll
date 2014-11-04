@@ -14,6 +14,7 @@ essen.cacheSelectors = function () {
     $reservations  : $('.reservations'),
     $menu          : $('.nav-wrapper'),
     $siteHeader    : $('header'),
+    $siteHeaderHeight : $('header').outerHeight(),
     isSticky : false,
     isUnsticky : false,
     //scroll position
