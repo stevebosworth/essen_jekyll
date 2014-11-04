@@ -74,6 +74,9 @@ gulp.task('sass', function () {
 gulp.task('fonts', function () {
   gulp.src('src/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'));
+
+  gulp.src('src/fonts/**/*.*')
+    .pipe(gulp.dest('_site/dist/fonts'));
 });
 
 gulp.task('js', function () {
