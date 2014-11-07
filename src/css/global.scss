@@ -1,5 +1,6 @@
 @import "foundation/foundation/_settings.scss";
 @import "variables.scss";
+@import "functions.scss";
 
 body {
   font-family: $font-family-sans-serif;
@@ -57,16 +58,30 @@ h2 {
     color: $primary-color;
   }
 
+  &.sticky,
+  &.unsticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
   &.unsticky {
     height: 0;
+    @include prefix(transform, translate3d(0px, 0, 0));
+    @include transition(all 0.3s ease);
   }
 
   &.sticky {
     position: fixed;
+    height: 65px;
+    @include prefix(transform, translate3d(0px, 0, 0));
+    @include transition(all 0.3s ease);
   }
 }
 
-.reservations, .social-media {
+.reservations,
+.social-media {
    a {
     font-size: rem-calc(30);
     display: inline-block;
@@ -84,6 +99,10 @@ header {
   position: relative;
 }
 
+.reservations,
+.nav-wrapper {
+}
+
 /*============================================================================
   # Navigation
 ==============================================================================*/
@@ -94,14 +113,28 @@ header {
   right: 0;
   overflow: hidden;
 
+  &.sticky,
+  &.unsticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
   &.unsticky {
     height: 0;
+    @include prefix(transform, translate3d(0px, 0, 0));
+    @include transition(all 0.3s ease);
   }
 
   &.sticky {
     position: fixed;
-    top: 65px;
+    top: 0;
+    padding-top: 65px;
     z-index: $zindex5;
+    height: $mobileNavBarHeight;
+    @include prefix(transform, translate3d(0px, 0, 0));
+    @include transition(all 0.3s ease);
   }
 }
 

@@ -37,15 +37,11 @@ essen.detectScroll = function () {
   //if we're still near the top of the page
   if (currentScrollTop <= 0) {
     if (essen.cache.isSticky) {
-      essen.cache.$reservations.removeClass('sticky');
-      essen.cache.$menu.removeClass('sticky');
-      essen.cache.isSticky = false;
+      essen.removeStickyNav();
     }
 
     if (essen.cache.isUnsticky) {
-      essen.cache.$reservations.removeClass('unsticky');
-      essen.cache.$menu.removeClass('unsticky');
-      essen.cache.isUnsticky = false;
+      essen.removeUnstickyNav();
     }
 
     essen.cache.scrollPosition = currentScrollTop;
@@ -55,15 +51,11 @@ essen.detectScroll = function () {
   //scroll Down && we're below the header
   if (currentScrollTop > essen.cache.scrollPosition && currentScrollTop > essen.cache.siteHeaderHeight + 50) {
     if (essen.cache.isSticky){
-      essen.cache.$reservations.removeClass('sticky');
-      essen.cache.$menu.removeClass('sticky');
-      essen.cache.isSticky = false;
+     essen.removeStickyNav();
     }
 
     if (!essen.cache.isUnsticky) {
-      essen.cache.$reservations.addClass('unsticky');
-      essen.cache.$menu.addClass('unsticky');
-      essen.cache.isUnsticky = true;
+      essen.addUnstickyNav();
     }
 
     essen.cache.scrollPosition = currentScrollTop;
@@ -82,30 +74,49 @@ essen.detectScroll = function () {
 
     if (currentScrollTop < essen.cache.siteHeaderHeight -170) {
       if (essen.cache.isUnsticky) {
-        essen.cache.$menu.removeClass('unsticky');
-        essen.cache.$reservations.removeClass('unsticky');
-        essen.cache.isUnsticky = false;
+        essen.removeUnstickyNav();
       }
       essen.cache.$menu.removeClass('sticky');
     }
 
     if(essen.cache.isUnsticky){
-      essen.cache.$reservations.removeClass('unsticky');
-      essen.cache.$menu.removeClass('unsticky');
-
-      essen.cache.isUnsticky = false;
+      essen.removeUnstickyNav();
     }
 
     if (!essen.cache.isSticky) {
-      essen.cache.$reservations.addClass('sticky');
-      essen.cache.$menu.addClass('sticky');
-      essen.cache.isSticky = true;
+      essen.addStickyNav();
     }
 
 
     essen.cache.scrollPosition = currentScrollTop;
     return;
   }
+};
+
+essen.addStickyNav = function () {
+  essen.cache.$reservations.addClass('sticky');
+  essen.cache.$menu.addClass('sticky');
+  essen.cache.isSticky = true;
+};
+
+essen.removeStickyNav = function () {
+  essen.cache.$reservations.removeClass('sticky');
+  essen.cache.$menu.removeClass('sticky');
+  essen.cache.isSticky = false;
+};
+
+essen.addUnstickyNav = function () {
+  essen.cache.$reservations.addClass('unsticky');
+  essen.cache.$menu.addClass('unsticky');
+
+  essen.cache.isUnsticky = true;
+};
+
+essen.removeUnstickyNav = function () {
+  essen.cache.$reservations.removeClass('unsticky');
+  essen.cache.$menu.removeClass('unsticky');
+
+  essen.cache.isUnsticky = false;
 };
 
 // Returns a function, that, as long as it continues to be invoked, will not

@@ -19,6 +19,7 @@ var concat      = require('gulp-concat');
 var imagemin    = require('gulp-imagemin');
 var source      = require('vinyl-source-stream');
 var utils       = require('gulp-util');
+var connect     = require('gulp-connect');
 
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
@@ -28,28 +29,25 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    browserSync.notify(messages.jekyllBuild);
     return cp.spawn('jekyll', ['build'], { stdio: 'inherit' })
         .on('close', done);
 });
 
-/**
- * Rebuild Jekyll & do page reload
- */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-    browserSync.reload();
+gulp.task('jekyll-rebuild', function () {
+  connect.reload();
+});
+
+gulp.task('connect', function() {
+  connect.server({
+    root: '_site',
+    livereload: true
+  });
 });
 
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['build', 'jekyll-build'], function() {
-    browserSync({
-        server: {
-            baseDir: '_site'
-        }
-    });
-});
+gulp.task('start-server', ['build', 'jekyll-build', 'connect']);
 
 gulp.task('build', ['sass', 'js', "images", "fonts"]);
 
@@ -67,16 +65,15 @@ gulp.task('sass', function () {
         .pipe(minifyCSS())
         .pipe(rename('build.min.css'))
         .pipe(gulp.dest('_site/dist/css'))
-        .pipe(browserSync.reload({stream:true}))
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('dist/css'))
+        .pipe(connect.reload());
 });
 
 gulp.task('fonts', function () {
   gulp.src('src/fonts/**/*.*')
-    .pipe(gulp.dest('dist/fonts'));
-
-  gulp.src('src/fonts/**/*.*')
-    .pipe(gulp.dest('_site/dist/fonts'));
+    .pipe(gulp.dest('dist/fonts'))
+    .pipe(gulp.dest('_site/dist/fonts'))
+    .pipe(connect.reload());
 });
 
 gulp.task('js', function () {
@@ -86,15 +83,16 @@ gulp.task('js', function () {
     .pipe(gulp.dest('_site/dist/js'));
 
   gulp.src('bower_components/**/*.*')
-    .pipe(gulp.dest('_site/bower_components'));
+    .pipe(gulp.dest('_site/bower_components'))
+    .pipe(connect.reload());
 });
 
 gulp.task('images', function() {
     gulp.src('src/img/**/*.+(png|jpeg|jpg|gif|svg)')
         .pipe(imagemin())
         .pipe(gulp.dest('_site/dist/img'))
-        .pipe(browserSync.reload({ stream: true }))
-        .pipe(gulp.dest('dist/img'));
+        .pipe(gulp.dest('dist/img'))
+        .pipe(connect.reload());
 });
 
 /**
@@ -103,7 +101,7 @@ gulp.task('images', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('src/css/*.scss', ['sass']);
-    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_config.yml', '_includes/*.html', '_data/**/*'], ['jekyll-rebuild']);
+    gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_config.yml', '_includes/*.html', '_data/**/*'], ['jekyll-build']);
     gulp.watch('src/js/*.js', ['js']);
     gulp.watch('src/images/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);
 });
@@ -112,4 +110,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['start-server', 'watch']);
