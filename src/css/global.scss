@@ -173,7 +173,9 @@ nav li {
 }
 
 .sub-nav {
-  display: block;
+  ul {
+    display: none;
+  }
   background-color: $secondary-color;
   text-align: center;
   margin-top: -4px;
@@ -190,10 +192,10 @@ nav li {
     color: $jet;
     font-style: italic;
   }
-}
 
-.sub-nav__brunch {
-  display: none;
+  ul.active {
+    display: block;
+  }
 }
 
 

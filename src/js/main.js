@@ -4,8 +4,9 @@ essen.init = function () {
   essen.cacheSelectors();
   essen.detectScroll();
 
+  essen.cache.$navItems.on('click', essen.onNavClick);
+
   $(window).on('scroll', essen.detectScroll);
-  $(window).on('load', essen.equalHeights);
   $(window).on('resize', essen.debounce(essen.onResize, 200));
 };
 
@@ -14,21 +15,28 @@ essen.cacheSelectors = function () {
     $reservations  : $('.reservations'),
     $menu          : $('.nav-wrapper'),
     $siteHeader    : $('header'),
+    $siteNavDinner : $('.nav-item__dinner'),
+    $siteNavBrunch : $('.nav-item__brunch'),
+    $subNavDinner : $('.sub-nav__dinner'),
+    $subNavBrunch : $('.sub-nav__brunch'),
+    brunchOffsetTop : $('#Brunch').offset().top,
     siteHeaderHeight : $('header').outerHeight(),
     isSticky : false,
     isUnsticky : false,
     //scroll position
-    scrollPosition : 0
+    scrollPosition : 0,
+    $navItems: $('nav a')
   };
 };
 
 essen.onResize = function () {
-  console.log('resize');
   essen.cache.siteHeaderHeight = essen.cache.$siteHeader.outerHeight();
 };
 
 essen.onNavClick = function () {
-
+  if (essen.cache.isSticky) {
+    essen.removeStickyNav();
+  }
 };
 
 essen.detectScroll = function () {
@@ -56,6 +64,12 @@ essen.detectScroll = function () {
 
     if (!essen.cache.isUnsticky) {
       essen.addUnstickyNav();
+    }
+
+    if (currentScrollTop > essen.cache.brunchOffsetTop) {
+      essen.markBrunchActive();
+    } else {
+      essen.markDinnerActive();
     }
 
     essen.cache.scrollPosition = currentScrollTop;
@@ -87,10 +101,31 @@ essen.detectScroll = function () {
       essen.addStickyNav();
     }
 
+    if (currentScrollTop > essen.cache.brunchOffsetTop) {
+      essen.markBrunchActive();
+    } else {
+      essen.markDinnerActive();
+    }
 
     essen.cache.scrollPosition = currentScrollTop;
     return;
   }
+
+
+};
+
+essen.markDinnerActive = function () {
+  essen.cache.$siteNavDinner.addClass('active');
+  essen.cache.$subNavDinner.addClass('active');
+  essen.cache.$siteNavBrunch.removeClass('active');
+  essen.cache.$subNavBrunch.removeClass('active');
+};
+
+essen.markBrunchActive = function () {
+  essen.cache.$siteNavBrunch.addClass('active');
+  essen.cache.$subNavBrunch.addClass('active');
+  essen.cache.$siteNavDinner.removeClass('active');
+  essen.cache.$subNavDinner.removeClass('active');
 };
 
 essen.addStickyNav = function () {
