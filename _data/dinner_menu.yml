@@ -110,7 +110,7 @@ sides:
         pair: 6
         quad: 10
       photo:
-        src: "Essen_DuckFatChips.jpg"
+        src: "Essen_DuckfatChips.jpg"
 
     - name: "Cabbage rolls"
       description: "rice, cooked in tomato sauce"
