@@ -5,13 +5,19 @@ rank: 7
 items:
   - name: "Gribenes"
     description: "(crispy duck or chicken skin)"
+    price: 3
 
   - name: "Fried onions"
+    price: 3
 
   - name: "Roast pepper sauce/ Garlic tahini"
+    price: 3
 
   - name: "Brisket hash"
+    price: 3
 
   - name: "Sour cream"
+    price: 3
 
   - name: "Brisket Jus"
+    price: 3

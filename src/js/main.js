@@ -3,6 +3,7 @@ window.essen = window.essen || {};
 essen.init = function () {
   essen.cacheSelectors();
   essen.detectScroll();
+  essen.foundation();
 
   essen.cache.$navItems.on('click', essen.onNavClick);
 
@@ -10,10 +11,23 @@ essen.init = function () {
   $(window).on('resize', essen.debounce(essen.onResize, 200));
 };
 
+essen.foundation = function () {
+  $(document).foundation({
+    "magellan-expedition": {
+      active_class: 'active', // specify the class used for active sections
+      threshold: essen.cache.siteHeaderHeight,
+      destination_threshold: 200, // pixels from the top of destination for it to be considered active
+      fixed_top: 123, // top distance in pixels assigned to the fixed element on scroll
+    }
+  });
+};
+
 essen.cacheSelectors = function () {
   essen.cache = {
+    $main          : $('main'),
     $reservations  : $('.reservations'),
     $menu          : $('.nav-wrapper'),
+    $subNav        : $('.sub-nav__wrapper'),
     $siteHeader    : $('header'),
     $siteNavDinner : $('.nav-item__dinner'),
     $siteNavBrunch : $('.nav-item__brunch'),
@@ -23,6 +37,8 @@ essen.cacheSelectors = function () {
     siteHeaderHeight : $('header').outerHeight(),
     isSticky : false,
     isUnsticky : false,
+    isDinnerActive : false,
+    isBrunchActive : false,
     //scroll position
     scrollPosition : 0,
     $navItems: $('nav a')
@@ -31,11 +47,17 @@ essen.cacheSelectors = function () {
 
 essen.onResize = function () {
   essen.cache.siteHeaderHeight = essen.cache.$siteHeader.outerHeight();
+
+  $(document).foundation({
+    "magellan-expedition": {
+      threshold: essen.cache.siteHeaderHeight
+    }
+  });
 };
 
 essen.onNavClick = function () {
   if (essen.cache.isSticky) {
-    essen.removeStickyNav();
+    window.setTimeout(essen.removeStickyNav, 10);
   }
 };
 
@@ -86,7 +108,7 @@ essen.detectScroll = function () {
       return;
     }
 
-    if (currentScrollTop < essen.cache.siteHeaderHeight -170) {
+    if (currentScrollTop < essen.cache.siteHeaderHeight -190) {
       if (essen.cache.isUnsticky) {
         essen.removeUnstickyNav();
       }
@@ -101,10 +123,16 @@ essen.detectScroll = function () {
       essen.addStickyNav();
     }
 
-    if (currentScrollTop > essen.cache.brunchOffsetTop) {
+    if (currentScrollTop > essen.cache.brunchOffsetTop  && !essen.cache.isBrunchActive) {
       essen.markBrunchActive();
-    } else {
+      essen.cache.isBrunchActive = true;
+      essen.cache.isDinnerActive = false;
+    }
+
+    if (currentScrollTop < essen.cache.brunchOffsetTop && !essen.cache.isDinnerActive) {
       essen.markDinnerActive();
+      essen.cache.isBrunchActive = false;
+      essen.cache.isDinnerActive = true;
     }
 
     essen.cache.scrollPosition = currentScrollTop;
@@ -131,18 +159,22 @@ essen.markBrunchActive = function () {
 essen.addStickyNav = function () {
   essen.cache.$reservations.addClass('sticky');
   essen.cache.$menu.addClass('sticky');
+  essen.cache.$main.addClass('sticky-nav');
   essen.cache.isSticky = true;
+
 };
 
 essen.removeStickyNav = function () {
   essen.cache.$reservations.removeClass('sticky');
   essen.cache.$menu.removeClass('sticky');
+  essen.cache.$main.removeClass('sticky-nav');
   essen.cache.isSticky = false;
 };
 
 essen.addUnstickyNav = function () {
   essen.cache.$reservations.addClass('unsticky');
   essen.cache.$menu.addClass('unsticky');
+  essen.cache.$subNav.removeAttr('style');
 
   essen.cache.isUnsticky = true;
 };

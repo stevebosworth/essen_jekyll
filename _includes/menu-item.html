@@ -3,7 +3,19 @@
   {% for menuItem in menu_item.items %}
     <li class="section__item">
       <div class="wrapper">
-        <span class="section__item-name">{{ menuItem.name }}</span>
+        {% if menuItem.photo %}
+          <button data-reveal-id="photo{{ menuItem.photo.src | remove: '.jpg' }}" class="btn--inline section__item-name">
+            <span>{{ menuItem.name }}</span>
+            <span><i class="fa fa-camera"></i></span>
+          </button>
+          <div id="photo{{ menuItem.photo.src | remove: '.jpg' }}" class="reveal-modal" data-reveal>
+            <img src="dist/img/{{ menuItem.photo.src }}" alt="">
+            <a class="close-reveal-modal">&#215;</a>
+          </div>
+        {% endif %}
+        <span class="section__item-name">
+          {{ menuItem.name }}
+        </span>
         <span class="section__item-price">
           <span class="currency">$</span>
           {% if menuItem.price.pair %}

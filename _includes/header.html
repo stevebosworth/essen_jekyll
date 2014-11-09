@@ -4,35 +4,31 @@
       <i class="fa fa-book"></i>
       <span>reserve a table</span>
     </a>
-    <a class="small-4" href="directions" class="call"><i class="fa fa-map-marker"></i><span>1282 Dundas St. West</span></a>
+    <a class="small-4" href="https://www.google.com/maps/place/1282+Dundas+St+W,+Toronto,+ON+M6J+1X7" class="call"><i class="fa fa-map-marker"></i><span>1282 Dundas St. West</span></a>
     <a class="small-4" href="tel:1234566789" class="call"><i class="fa fa-phone"></i><span>416-534-0407</span></a>
   </div>
   <div class="row header-logo">
-    <img src="dist/img/logo-662x453.png" alt="">
+    <img src="dist/img/logo-662x453.png" alt="Essen Restuarant Est. 5774">
   </div>
   <nav class="row nav-wrapper">
     <ul class="main-nav">
       <li class="main-nav__item">
-        <a class="nav-item__dinner active" href="#Dinner">Dinner</a>
+        <a data-magellan-arrival="Dinner" class="nav-item__dinner active" href="#Dinner">Dinner</a>
       </li>
       <li class="main-nav__item">
-        <a class="nav-item__brunch" href="#Brunch">Brunch</a>
+        <a data-magellan-arrival="Brunch" class="nav-item__brunch" href="#Brunch">Brunch</a>
       </li>
     </ul>
-    <div class="sub-nav">
-      <ul class="sub-nav__dinner active">
+    <div class="sub-nav__wrapper" data-magellan-expedition="fixed">
+      <ul class="sub-nav">
         {% for item in site.data.dinner_menu %}
-          <li class="sub-nav__item">
-            <a href="#Dinner{{ item[1].name | capitalize }}">{{ item[1].title | capitalize }}</a>
+          <li class="sub-nav__item sub-nav__dinner active">
+            <a data-magellan-arrival="Dinner{{ item[1].name | capitalize }}" href="#Dinner{{ item[1].name | capitalize }}">{{ item[1].title | capitalize }}</a>
           </li>
         {% endfor %}
-      </ul>
-    </div>
-    <div class="sub-nav">
-      <ul class="sub-nav__brunch">
         {% for item in site.data.brunch_menu %}
-          <li class="sub-nav__item">
-          <a href="#Brunch{{ item[1].name | capitalize }}">{{ item[1].title | capitalize }}</a>
+          <li class="sub-nav__item sub-nav__brunch">
+            <a data-magellan-arrival="Brunch{{ item[1].name | capitalize }}" href="#Brunch{{ item[1].name | capitalize }}">{{ item[1].title | capitalize }}</a>
           </li>
         {% endfor %}
       </ul>

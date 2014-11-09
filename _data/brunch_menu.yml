@@ -39,6 +39,8 @@ sandwiches:
     - name: "Jewish banh mi "
       price: 12
       description: "chopped chicken liver, fried beef salami, grainy mustard, pickled carrots, red onion"
+      photo:
+        src: "Essen_SalamiSandwich.jpg"
 
     - name: "Bagel "
       price: 12
@@ -51,6 +53,8 @@ sandwiches:
     - name: "Brisket "
       price: 12
       description: "horseradish, garlic mayo, grainy mustard, red onion and lettuce"
+      photo:
+        src: "Essen_BrisketSandwich.jpg"
 
     - name: "Breakfast sandwich "
       price: 8

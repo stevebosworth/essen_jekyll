@@ -4,6 +4,13 @@
 
 body {
   font-family: $font-family-sans-serif;
+  margin-top: 0;
+
+  &.sticky-nav {
+    margin-top: $mobileNavBarHeight;
+  }
+
+  @include transition(margin-top 0.4s ease);
 }
 
 main {
@@ -30,6 +37,16 @@ h2 {
   padding: 10px 0;
 }
 
+.btn--inline {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: inline-block;
+  background-color: transparent;
+  color: $jet;
+  cursor: pointer;
+}
+
 .header-logo {
   padding: 70px;
   padding-bottom: 140px;
@@ -52,6 +69,7 @@ h2 {
 
   a {
     color: $secondary-color;
+    text-decoration: none;
   }
 
   span {
@@ -139,8 +157,12 @@ header {
 }
 
 nav li {
-  display: inline-block;
+  display: none;
   text-align: center;
+
+  &.active {
+    display: inline-block;
+  }
 
   a {
     color: $primary-color;
@@ -164,37 +186,51 @@ nav li {
     font-style: italic;
     line-height: rem-calc(38);
     display: block;
+    text-decoration: none;
 
     &.active {
       font-size: rem-calc(48);
       border-bottom: 4px solid $secondary-color;
     }
+
+    @include transition(font-size 0.3s ease);
+  }
+}
+
+.sub-nav__wrapper {
+  padding: 0;
+
+  &[data-magellan-expedition-clone] {
+    display: none;
   }
 }
 
 .sub-nav {
-  ul {
-    display: none;
-  }
   background-color: $secondary-color;
   text-align: center;
   margin-top: -4px;
+  display: block;
+  padding: 10px 20px;
+  background-color: $secondary-color;
 
   li {
-    width: 24%;
-    float: none;
-    display: inline-block;
-    margin-left: 0;
-  }
+    margin: 0 12px;
+    a {
+      text-transform: uppercase;
+      color: $charcoal;
+      font-style: italic;
+      text-decoration: none;
+      padding: 5px 10px;
 
-  li a {
-    text-transform: uppercase;
-    color: $jet;
-    font-style: italic;
-  }
-
-  ul.active {
-    display: block;
+      &.active,
+      &:hover,
+      &:active {
+        background: $primary-color;
+        border-radius: 3px;
+        font-weight: 900;
+        color: lighten($iron, 15%);
+      }
+    }
   }
 }
 
@@ -202,6 +238,16 @@ nav li {
 /*============================================================================
   # Menu Items and Sections
 ==============================================================================*/
+
+.section__header {
+  margin: 40px 0 15px;
+  text-align: center;
+  font-size: rem-calc(48);
+  color: $jet;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 300;
+}
 
 .section__list {
   padding: $column-gutter;
@@ -297,6 +343,10 @@ nav li {
 ==============================================================================*/
 footer {
   text-align: center;
+
+  a {
+    color: $secondary-color;
+  }
 
   span {
     display: block;

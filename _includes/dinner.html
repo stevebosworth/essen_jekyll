@@ -1,8 +1,7 @@
-{% assign menu_sections = site.data.dinner_menu.sections %}
-
+<h1 class="section__header">Dinner</h1>
 {% for item in site.data.dinner_menu %}
   {% assign menu_item = item[1] %}
-  <div class="section section-{{ menu_item.name }}" id="Dinner{{ menu_item.name | capitalize}}">
+  <div class="section section-{{ menu_item.name }}" data-magellan-destination="Dinner{{ menu_item.name | capitalize }}"  id="Dinner{{ menu_item.name | capitalize}}">
     {% include menu-item.html %}
   </div>
 {% endfor %}
