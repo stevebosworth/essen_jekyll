@@ -5,7 +5,7 @@ essen.init = function () {
   essen.detectScroll();
   essen.foundation();
 
-  essen.cache.$navItems.on('click', essen.onNavClick);
+  essen.cache.$navItems.on('click', essen.smoothScroll);
 
   $(window).on('scroll', essen.detectScroll);
   $(window).on('resize', essen.debounce(essen.onResize, 200));
@@ -24,29 +24,34 @@ essen.foundation = function () {
 
 essen.cacheSelectors = function () {
   essen.cache = {
-    $main          : $('main'),
-    $reservations  : $('.reservations'),
-    $menu          : $('.nav-wrapper'),
-    $subNav        : $('.sub-nav__wrapper'),
-    $siteHeader    : $('header'),
-    $siteNavDinner : $('.nav-item__dinner'),
-    $siteNavBrunch : $('.nav-item__brunch'),
-    $subNavDinner : $('.sub-nav__dinner'),
-    $subNavBrunch : $('.sub-nav__brunch'),
-    brunchOffsetTop : $('#Brunch').offset().top,
-    siteHeaderHeight : $('header').outerHeight(),
-    isSticky : false,
-    isUnsticky : false,
-    isDinnerActive : false,
-    isBrunchActive : false,
+    // $main             : $('body'),
+    $reservations     : $('.reservations'),
+    $menu             : $('.nav-wrapper'),
+    $subNav           : $('.sub-nav__wrapper'),
+    $siteHeader       : $('header'),
+    $siteNavDinner    : $('.nav-item__dinner'),
+    $siteNavBrunch    : $('.nav-item__brunch'),
+    $subNavDinner     : $('.sub-nav__dinner'),
+    $subNavBrunch     : $('.sub-nav__brunch'),
+    brunchOffsetTop   : $('#Brunch').offset().top,
+    siteHeaderHeight  : $('header').outerHeight(),
+    menuHeight        : $('.nav-wrapper').height(),
+    reservationHeight : $('.reservations').height(),
+    isSticky          : false,
+    isUnsticky        : false,
+    isDinnerActive    : false,
+    isBrunchActive    : false,
+
     //scroll position
-    scrollPosition : 0,
-    $navItems: $('nav a')
+    scrollPosition    : 0,
+    $navItems         : $('nav a')
   };
 };
 
 essen.onResize = function () {
   essen.cache.siteHeaderHeight = essen.cache.$siteHeader.outerHeight();
+  essen.cache.menuHeight =  $('.nav-wrapper').height();
+  essen.cache.reservationHeight = $('.reservations').height();
 
   $(document).foundation({
     "magellan-expedition": {
@@ -56,9 +61,6 @@ essen.onResize = function () {
 };
 
 essen.onNavClick = function () {
-  if (essen.cache.isSticky) {
-    window.setTimeout(essen.removeStickyNav, 10);
-  }
 };
 
 essen.detectScroll = function () {
@@ -108,11 +110,13 @@ essen.detectScroll = function () {
       return;
     }
 
-    if (currentScrollTop < essen.cache.siteHeaderHeight -190) {
+    if (currentScrollTop < essen.cache.siteHeaderHeight - essen.cache.menuHeight) {
       if (essen.cache.isUnsticky) {
         essen.removeUnstickyNav();
       }
       essen.cache.$menu.removeClass('sticky');
+      essen.cache.$menu.removeAttr('style');
+      essen.cache.$reservations.css('height', essen.cache.reservationHeight);
     }
 
     if(essen.cache.isUnsticky){
@@ -158,16 +162,20 @@ essen.markBrunchActive = function () {
 
 essen.addStickyNav = function () {
   essen.cache.$reservations.addClass('sticky');
+  essen.cache.$menu.css('height', essen.cache.menuHeight + essen.cache.reservationHeight);
+  essen.cache.$reservations.css('height', essen.cache.menuHeight + essen.cache.reservationHeight);
   essen.cache.$menu.addClass('sticky');
-  essen.cache.$main.addClass('sticky-nav');
+  // essen.cache.$main.css('margin-top', essen.cache.menuHeight + essen.cache.reservationHeight);
   essen.cache.isSticky = true;
 
 };
 
 essen.removeStickyNav = function () {
+  essen.cache.$menu.removeAttr('style');
+  essen.cache.$reservations.removeAttr('style');
   essen.cache.$reservations.removeClass('sticky');
   essen.cache.$menu.removeClass('sticky');
-  essen.cache.$main.removeClass('sticky-nav');
+  // essen.cache.$main.removeAttr('style');
   essen.cache.isSticky = false;
 };
 
@@ -182,7 +190,7 @@ essen.addUnstickyNav = function () {
 essen.removeUnstickyNav = function () {
   essen.cache.$reservations.removeClass('unsticky');
   essen.cache.$menu.removeClass('unsticky');
-
+  // essen.cache.$main.removeAttr('style');
   essen.cache.isUnsticky = false;
 };
 
@@ -203,6 +211,26 @@ essen.debounce = function (func, wait, immediate) {
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
   };
+};
+
+essen.smoothScroll = function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+
+      if (essen.cache.isSticky) {
+        window.setTimeout(function () {
+          essen.removeStickyNav();
+          essen.addUnstickyNav();
+        }, 1100);
+      }
+      return false;
+    }
+  }
 };
 
 $(essen.init);
