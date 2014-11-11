@@ -116,7 +116,7 @@ essen.detectScroll = function () {
       }
       essen.cache.$menu.removeClass('sticky');
       essen.cache.$menu.removeAttr('style');
-      essen.cache.$reservations.css('height', essen.cache.reservationHeight);
+      // essen.cache.$reservations.css('height', essen.cache.reservationHeight);
     }
 
     if(essen.cache.isUnsticky){
@@ -163,11 +163,9 @@ essen.markBrunchActive = function () {
 essen.addStickyNav = function () {
   essen.cache.$reservations.addClass('sticky');
   essen.cache.$menu.css('height', essen.cache.menuHeight + essen.cache.reservationHeight);
-  essen.cache.$reservations.css('height', essen.cache.menuHeight + essen.cache.reservationHeight);
+  // essen.cache.$reservations.css('height', essen.cache.menuHeight + essen.cache.reservationHeight);
   essen.cache.$menu.addClass('sticky');
-  // essen.cache.$main.css('margin-top', essen.cache.menuHeight + essen.cache.reservationHeight);
   essen.cache.isSticky = true;
-
 };
 
 essen.removeStickyNav = function () {

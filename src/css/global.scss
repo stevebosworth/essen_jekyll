@@ -54,6 +54,7 @@ header {
   position: relative;
 }
 
+
 /*============================================================================
   # Navigation & Reservations
 ==============================================================================*/
@@ -63,7 +64,7 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: $zindex5;
+  z-index: $zindex6;
   background: $body-bg;
   overflow: hidden;
 
@@ -179,7 +180,6 @@ nav li {
 
     &.active {
       font-size: rem-calc(48);
-      border-bottom: 4px solid $secondary-color;
     }
 
     @include transition(font-size 0.3s ease);
@@ -342,6 +342,30 @@ nav li {
     .section__item-price {
       background: $tertiary-color;
     }
+  }
+}
+
+
+.reveal-modal {
+
+  .close-reveal-modal {
+    background-color: $primary-color;
+    color: $body-bg;
+    height: 26px;
+    width: 26px;
+    font-size: rem-calc(35);
+    line-height: 26px;
+    text-align: center;
+    border-radius: 13px;
+  }
+}
+
+
+@media #{$small-only} {
+  .reveal-modal {
+    padding: 0;
+    margin-top: 50%;
+    min-height: 0;
   }
 }
 

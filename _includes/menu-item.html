@@ -9,7 +9,9 @@
             <span><i class="fa fa-camera"></i></span>
           </button>
           <div id="photo{{ menuItem.photo.src | remove: '.jpg' }}" class="reveal-modal" data-reveal>
-            <img src="dist/img/{{ menuItem.photo.src }}" alt="">
+            <div class="photo-wrapper">
+              <img src="dist/img/{{ menuItem.photo.src }}" alt="">
+            </div>
             <a class="close-reveal-modal">&#215;</a>
           </div>
         {% endif %}
