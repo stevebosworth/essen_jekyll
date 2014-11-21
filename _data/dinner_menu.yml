@@ -12,8 +12,8 @@ mains:
     - name: "Braised beef brisket"
       description: "natural jus, prepared horseradish"
       price:
-        pair: 8
-        quad: 4
+        pair: 18
+        quad: 34
       photo:
         src: "Essen_Brisket.jpg"
 
