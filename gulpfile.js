@@ -29,8 +29,8 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    return cp.spawn('jekyll', ['build'], { stdio: 'inherit' })
-        .on('close', done);
+    // return cp.spawn('bundle', ['bundle exec jekyll build'], { stdio: 'inherit' })
+    //     .on('close', done);
 });
 
 gulp.task('jekyll-rebuild', function () {
@@ -40,7 +40,8 @@ gulp.task('jekyll-rebuild', function () {
 gulp.task('connect', function() {
   connect.server({
     root: '_site',
-    livereload: true
+    livereload: true,
+    port: 8000
   });
 });
 

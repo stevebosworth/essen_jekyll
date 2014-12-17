@@ -58,6 +58,15 @@ header {
 /*============================================================================
   # Navigation & Reservations
 ==============================================================================*/
+.closed-alert {
+  width: 100%;
+  padding: 20px;
+  background-color: red;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;;
+}
+
 .reservations {
   position: absolute;
   top: 0;
