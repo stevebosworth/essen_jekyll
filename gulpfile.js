@@ -29,8 +29,8 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-    // return cp.spawn('bundle', ['bundle exec jekyll build'], { stdio: 'inherit' })
-    //     .on('close', done);
+     return cp.spawn('bundle', ['bundle exec jekyll build'], { stdio: 'inherit' })
+         .on('close', done);
 });
 
 gulp.task('jekyll-rebuild', function () {
@@ -50,7 +50,7 @@ gulp.task('connect', function() {
  */
 gulp.task('start-server', ['build', 'jekyll-build', 'connect']);
 
-gulp.task('build', ['sass', 'js', "fonts"]);
+gulp.task('build', ['jekyll-build', 'sass', 'js', "fonts"]);
 
 /**
  * Compile files from src into both _site/dist/css (for live injecting) and dist/css (for future jekyll builds)
