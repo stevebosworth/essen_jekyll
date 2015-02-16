@@ -29,7 +29,7 @@ var messages = {
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
-     return cp.spawn('bundle', ['bundle exec jekyll build'], { stdio: 'inherit' })
+     return cp.spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit' })
          .on('close', done);
 });
 

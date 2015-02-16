@@ -39,3 +39,4 @@ node_modules
 .tmp
 _site
 dist
+vendor
