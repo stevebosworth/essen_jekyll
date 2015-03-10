@@ -50,7 +50,7 @@ gulp.task('connect', function() {
  */
 gulp.task('start-server', ['build', 'jekyll-build', 'connect']);
 
-gulp.task('build', ['jekyll-build', 'sass', 'js', "fonts"]);
+gulp.task('build', ['jekyll-build', 'sass', 'js', "fonts", "downloads"]);
 
 /**
  * Compile files from src into both _site/dist/css (for live injecting) and dist/css (for future jekyll builds)
@@ -74,6 +74,13 @@ gulp.task('fonts', function () {
   gulp.src('src/fonts/**/*.*')
     .pipe(gulp.dest('dist/fonts'))
     .pipe(gulp.dest('_site/dist/fonts'))
+    .pipe(connect.reload());
+});
+
+gulp.task('downloads', function () {
+  gulp.src('src/downloads/**/*.*')
+    .pipe(gulp.dest('dist/downloads'))
+    .pipe(gulp.dest('_site/dist/downloads'))
     .pipe(connect.reload());
 });
 

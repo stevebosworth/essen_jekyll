@@ -41,6 +41,14 @@ h2 {
   cursor: pointer;
 }
 
+.download-button {
+  display: block;
+  width: 250px;
+  background-color: $primary-color;
+  border-radius: 5px;
+  margin: 40px auto 0px;
+}
+
 .header-logo {
   padding: 70px 20px 200px;
 
