@@ -79,8 +79,8 @@ gulp.task('fonts', function () {
 
 gulp.task('downloads', function () {
   gulp.src('src/downloads/**/*.*')
-    .pipe(gulp.dest('dist/downloads'))
-    .pipe(gulp.dest('_site/dist/downloads'))
+    .pipe(gulp.dest('downloads'))
+    .pipe(gulp.dest('_site/downloads'))
     .pipe(connect.reload());
 });
 
