@@ -50,7 +50,7 @@ gulp.task('connect', function() {
  */
 gulp.task('start-server', ['build', 'jekyll-build', 'connect']);
 
-gulp.task('build', ['jekyll-build', 'sass', 'js', "fonts", "downloads"]);
+gulp.task('build', ['jekyll-build', 'sass', 'js', "fonts", "images"]);
 
 /**
  * Compile files from src into both _site/dist/css (for live injecting) and dist/css (for future jekyll builds)
