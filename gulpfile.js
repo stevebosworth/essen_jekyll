@@ -109,6 +109,7 @@ gulp.task('images', function() {
  */
 gulp.task('watch', function () {
     gulp.watch('src/css/*.scss', ['sass']);
+    gulp.watch('src/img/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);
     gulp.watch(['index.html', '_layouts/*.html', '_posts/*', '_config.yml', '_includes/*.html', '_data/**/*'], ['jekyll-build']);
     gulp.watch('src/js/*.js', ['js']);
     gulp.watch('src/images/**/*.+(png|jpeg|jpg|gif|svg)', ['images']);

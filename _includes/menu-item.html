@@ -14,10 +14,11 @@
             </div>
             <a class="close-reveal-modal">&#215;</a>
           </div>
+        {% else %}
+          <span class="section__item-name">
+            {{ menuItem.name }}
+          </span>
         {% endif %}
-        <span class="section__item-name">
-          {{ menuItem.name }}
-        </span>
         <span class="section__item-price">
           <span class="currency">$</span>
           {% if menuItem.price.pair %}
